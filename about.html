@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Quality Pharmaceuticals</title>
+    <meta name="description" content="Learn about Quality Pharmaceuticals – our history, mission, and commitment to healthcare excellence.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page-specific hero for inner pages */
+        .page-hero {
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(135deg, var(--primary-teal), var(--primary-teal-dark));
+            text-align: center;
+            color: var(--white);
+        }
+        .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem; }
+        .page-hero p  { font-size: 1.1rem; opacity: 0.9; }
+        .about-content p { margin-bottom: 1rem; color: var(--navy-light); }
+        .about-content h3 { margin-bottom: 1rem; color: var(--navy-blue); font-size: 1.5rem; }
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading" id="loading"><div class="loader"></div></div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <a href="index.html" style="text-decoration:none;">
+            <div class="logo"><img src="images/logo.PNG.png" alt="Quality Pharmaceuticals"></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="mobile-menu"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <h1>About Quality Pharmaceuticals</h1>
+        <p>Over a decade of trusted healthcare excellence</p>
+    </section>
+
+    <!-- About Content -->
+    <section id="about" class="section">
+        <div class="about-content" data-aos="fade-up">
+            <div>
+                <h3>Our Commitment to Healthcare Excellence</h3>
+                <p>Quality Pharmaceuticals has been a trusted name in pharmaceutical manufacturing for over a decade. We specialize in producing high-quality, certified medicines that meet international standards.</p>
+                <p>Our mission is to provide safe, effective, and affordable healthcare solutions while maintaining the highest standards of quality assurance and customer safety.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fas fa-calendar"></i></div>
+                        <div>
+                            <h4>2013</h4>
+                            <p>Company Founded</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fas fa-certificate"></i></div>
+                        <div>
+                            <h4>2016</h4>
+                            <p>First FDA Certification</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                        <div>
+                            <h4>2023</h4>
+                            <p>Expanded to 20+ Products</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Pharmaceutical Lab" style="width:100%;border-radius:20px;box-shadow:var(--shadow-lg);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quality Pharmaceuticals</h3>
+                <p>Trusted pharmaceutical solutions for better healthcare. Committed to quality, safety, and innovation.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="index.html#products">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <a href="index.html#products">Pain Relief</a>
+                <a href="index.html#products">Vitamins</a>
+                <a href="index.html#products">Antibiotics</a>
+                <a href="index.html#products">Chronic Care</a>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <a href="contact.html">Customer Service</a>
+                <a href="contact.html">FAQ</a>
+                <a href="contact.html">Shipping Info</a>
+                <a href="contact.html">Returns</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Quality Pharmaceuticals. All rights reserved. | Designed for Healthcare Excellence</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

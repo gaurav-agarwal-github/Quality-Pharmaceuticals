@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Quality Pharmaceuticals</title>
+    <meta name="description" content="Get in touch with Quality Pharmaceuticals. Visit us, call us, or send a message.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-hero {
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(135deg, var(--primary-teal), var(--primary-teal-dark));
+            text-align: center;
+            color: var(--white);
+        }
+        .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem; }
+        .page-hero p  { font-size: 1.1rem; opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading" id="loading"><div class="loader"></div></div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <a href="index.html" style="text-decoration:none;">
+            <div class="logo"><img src="images/logo.PNG.png" alt="Quality Pharmaceuticals"></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="mobile-menu"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <h1>Get In Touch</h1>
+        <p>We're here to help with all your pharmaceutical needs</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="contact-content" data-aos="fade-up">
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Your Phone">
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <h4>Visit Us</h4>
+                        <p>H. No. 1075 (193), Adarsh Nagar, Jajmau, Kanpur 208010</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>9935430450<br>7355361236</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>info@qualitypharm.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <h4>Hours</h4>
+                        <p>Monday – Saturday<br>9:00 AM – 7:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quality Pharmaceuticals</h3>
+                <p>Trusted pharmaceutical solutions for better healthcare. Committed to quality, safety, and innovation.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="index.html#products">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <a href="index.html#products">Pain Relief</a>
+                <a href="index.html#products">Vitamins</a>
+                <a href="index.html#products">Antibiotics</a>
+                <a href="index.html#products">Chronic Care</a>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <a href="contact.html">Customer Service</a>
+                <a href="contact.html">FAQ</a>
+                <a href="contact.html">Shipping Info</a>
+                <a href="contact.html">Returns</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Quality Pharmaceuticals. All rights reserved. | Designed for Healthcare Excellence</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
