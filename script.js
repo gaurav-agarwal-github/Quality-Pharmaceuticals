@@ -245,7 +245,7 @@ const products = [
         quantities: [
             { label: "100ML Syrup", price: "₹70" },
             { label: "200ML Syrup", price: "₹100" },
-            { label: "10CAPS",      price: "₹110", images: ["/images/energyoncaps1.png","images/Energyoncaps2.png"] }
+            { label: "10CAPS",      price: "₹110", images: ["images/Energyoncaps1.png","images/energyoncaps2.png"] }
         ]
     },
     {
