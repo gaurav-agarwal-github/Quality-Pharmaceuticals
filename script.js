@@ -119,15 +119,15 @@ const products = [
         icon: "fas fa-capsules",
         images: ["images/QuasoCOL1.png","images/QuasoCOL2.png","images/QuasoCOL3.png","images/QuasoCOL4.png"],
         ingredients: [
-            { name: "Ashoka Bark",        img: "images/Ashoka Bark.jpg",        desc: "Ashoka bark is a highly valued Ayurvedic ingredient traditionally used to support women's wellness and reproductive health. It may help promote hormonal balance, comfort, and overall vitality." },
-            { name: "Kala Jeera Seed",    img: "images/Kala Jeera Seed.jpg",    desc: "Kala Jeera seeds are traditionally used in Ayurveda for their digestive and wellness-supporting properties. They may help support digestion, metabolism, and overall body balance." },
-            { name: "Daru Haldi Rhizome", img: "images/Daru Haldi Rhizome.jpg", desc: "Daru Haldi rhizome is known in Ayurveda for its cleansing and anti-inflammatory properties. It may help support skin health, digestion, immunity, and overall wellness." },
-            { name: "Lal Chandan Powder", img: "images/Lal Chandan Powder.jpg", desc: "Lal Chandan powder, also known as Red Sandalwood, is valued for its cooling and soothing properties. It may help support skin wellness, relaxation, and overall natural balance." },
-            { name: "Chansoor Seed",      img: "images/Chansoor Seed.jpg",      desc: "Chansoor seeds are rich in nutrients and traditionally used in Ayurveda to support strength, digestion, and overall wellness. They may also help promote energy and nourishment." },
-            { name: "Konch Seed",         img: "images/Konch Seed.jpg",         desc: "Konch seeds, also known as Mucuna Pruriens, are valued in Ayurveda for supporting strength, stamina, nervous system health, and overall vitality." },
-            { name: "Arjuna Bark",        img: "images/Arjuna Bark.jpg",        desc: "Arjuna bark is a respected Ayurvedic ingredient traditionally used to support heart health and circulation. It may help promote cardiovascular wellness, stamina, and overall vitality." },
-            { name: "Punarnava Root",     img: "images/Punarnava Root.jpg",     desc: "Punarnava root is widely used in Ayurveda for its rejuvenating and cleansing properties. It may help support kidney health, digestion, fluid balance, and overall body wellness." },
-            { name: "Palash Flowers",     img: "images/Palash Flowers.jpg",     desc: "Palash flowers are traditionally used in Ayurveda for their cleansing and wellness-supporting properties. They may help support digestion, skin wellness, and overall natural health." }
+            { name: "Ashoka Bark (Saraca asoca)",           img: "images/Ashoka Bark.jpg",        desc: "Ashoka bark is a highly valued Ayurvedic ingredient traditionally used to support women's wellness and reproductive health. It may help promote hormonal balance, comfort, and overall vitality." },
+            { name: "Kala Jeera Seed (Bunium persicum)",    img: "images/Kala Jeera Seed.jpg",    desc: "Kala Jeera seeds are traditionally used in Ayurveda for their digestive and wellness-supporting properties. They may help support digestion, metabolism, and overall body balance." },
+            { name: "Daru Haldi Rhizome (Berberis aristata)", img: "images/Daru Haldi Rhizome.jpg", desc: "Daru Haldi rhizome is known in Ayurveda for its cleansing and anti-inflammatory properties. It may help support skin health, digestion, immunity, and overall wellness." },
+            { name: "Lal Chandan (Pterocarpus santalinus)", img: "images/Lal Chandan Powder.jpg", desc: "Lal Chandan powder, also known as Red Sandalwood, is valued for its cooling and soothing properties. It may help support skin wellness, relaxation, and overall natural balance." },
+            { name: "Chansoor Seed (Lepidium sativum)",     img: "images/Chansoor Seed.jpg",      desc: "Chansoor seeds are rich in nutrients and traditionally used in Ayurveda to support strength, digestion, and overall wellness. They may also help promote energy and nourishment." },
+            { name: "Konch Seed (Mucuna pruriens)",         img: "images/Konch Seed.jpg",         desc: "Konch seeds, also known as Mucuna Pruriens, are valued in Ayurveda for supporting strength, stamina, nervous system health, and overall vitality." },
+            { name: "Arjuna Bark (Terminalia arjuna)",      img: "images/Arjuna Bark.jpg",        desc: "Arjuna bark is a respected Ayurvedic ingredient traditionally used to support heart health and circulation. It may help promote cardiovascular wellness, stamina, and overall vitality." },
+            { name: "Punarnava Root (Boerhavia diffusa)",   img: "images/Punarnava Root.jpg",     desc: "Punarnava root is widely used in Ayurveda for its rejuvenating and cleansing properties. It may help support kidney health, digestion, fluid balance, and overall body wellness." },
+            { name: "Palash Flowers (Butea monosperma)",   img: "images/Palash Flowers.jpg",     desc: "Palash flowers are traditionally used in Ayurveda for their cleansing and wellness-supporting properties. They may help support digestion, skin wellness, and overall natural health." }
         ],
         quantities: [{ label: "225ML", price: "₹100" }, { label: "450ML", price: "₹175" }]
     },
@@ -137,13 +137,13 @@ const products = [
         icon: "fas fa-capsules",
         images: ["images/Femina1.PNG.png","images/Femina2.PNG.png"],
         ingredients: [
-            { name: "Ashoka Bark",     img: "images/Ashoka Bark.jpg",     desc: "Ashoka bark is a revered Ayurvedic herb traditionally used to support women's reproductive health and menstrual wellness." },
-            { name: "Lodhra Bark",     img: "images/Lodhra Bark.jpg",     desc: "Lodhra bark is widely valued in Ayurveda for its cooling and astringent properties. It may help support women's wellness and promote healthy skin." },
-            { name: "Konch Seed",      img: "images/Konch Seed.jpg",      desc: "Konch seed is a powerful Ayurvedic ingredient known for supporting strength, stamina, and nervous system health." },
-            { name: "Sonth Rhizome",   img: "images/Sonth Rhizome.jpg",   desc: "Sonth rhizome, or dried ginger, is highly valued in Ayurveda for its warming and digestive properties." },
-            { name: "Ashwagandha Root",img: "images/Ashwagandha Root.jpg",desc: "Ashwagandha root is a renowned Ayurvedic herb known for its adaptogenic and rejuvenating properties." },
-            { name: "Shatavari Root",  img: "images/Shatavari Root.jpg",  desc: "Shatavari root is a highly respected Ayurvedic herb traditionally used to support women's health and hormonal balance." },
-            { name: "Gokhru Fruit",    img: "images/Gokhru Fruit.jpg",    desc: "Gokhru fruit is valued in Ayurveda for supporting urinary health, stamina, and vitality." }
+            { name: "Ashoka Bark (Saraca asoca)",           img: "images/Ashoka Bark.jpg",      desc: "Ashoka bark is a revered Ayurvedic herb traditionally used to support women's reproductive health and menstrual wellness." },
+            { name: "Lodhra Bark (Symplocos racemosa)",     img: "images/Lodhra Bark.jpg",      desc: "Lodhra bark is widely valued in Ayurveda for its cooling and astringent properties. It may help support women's wellness and promote healthy skin." },
+            { name: "Konch Seed (Mucuna pruriens)",         img: "images/Konch Seed.jpg",       desc: "Konch seed is a powerful Ayurvedic ingredient known for supporting strength, stamina, and nervous system health." },
+            { name: "Sonth Rhizome (Zingiber officinale)",  img: "images/Sonth Rhizome.jpg",    desc: "Sonth rhizome, or dried ginger, is highly valued in Ayurveda for its warming and digestive properties." },
+            { name: "Ashwagandha Root (Withania somnifera)",img: "images/Ashwagandha Root.jpg", desc: "Ashwagandha root is a renowned Ayurvedic herb known for its adaptogenic and rejuvenating properties." },
+            { name: "Shatavari Root (Asparagus racemosus)", img: "images/Shatavari Root.jpg",   desc: "Shatavari root is a highly respected Ayurvedic herb traditionally used to support women's health and hormonal balance." },
+            { name: "Gokhru Fruit (Tribulus terrestris)",   img: "images/Gokhru Fruit.jpg",     desc: "Gokhru fruit is valued in Ayurveda for supporting urinary health, stamina, and vitality." }
         ],
         quantities: [{ label: "10CAPS", price: "₹50" }]
     },
@@ -153,14 +153,14 @@ const products = [
         icon: "fas fa-lungs",
         images: ["images/Liv-top 1.PNG.png","images/Liv-top 2.PNG.png","images/Liv-top 3.PNG.png","images/Liv-top 4.PNG.png"],
         ingredients: [
-            { name: "Bhringraj Plant",    img: "images/Bhringraj plant.PNG.jpg", desc: "Bhringraj is a medicinal herb widely used in Ayurveda, known for supporting liver health and hair growth." },
-            { name: "Arjun Bark",         img: "images/Arjun Bark.PNG.jpg",      desc: "Arjuna bark contains natural antioxidants that may help strengthen heart muscles and improve blood circulation." },
-            { name: "Makoi Fruit",        img: "images/Makoi fruit.PNG",         desc: "Makoi, also known as Black Nightshade, may help reduce inflammation and support liver function." },
-            { name: "Tulsi Leaf",         img: "images/Tulsi leaf.PNG",          desc: "Tulsi, Holy Basil, is known for boosting immunity and supporting respiratory health." },
-            { name: "Pittapapda Plant",   img: "images/Pittapapda plant.PNG",    desc: "Pittapapda is an Ayurvedic herb traditionally used for liver health, skin problems, and body cooling." },
-            { name: "Sarpunkha Panchang", img: "images/Sarpunkha Panchang.PNG.PNG", desc: "Sarpunkha is traditionally known for supporting liver and spleen health, improving digestion, and body detoxification." },
-            { name: "Vidanga Seed",       img: "images/Vidanga seed.PNG",        desc: "Vidanga seeds are widely used for digestive and detox support, with anti-parasitic and antimicrobial properties." },
-            { name: "Ghritkumari Sap",    img: "images/Ghritkumari sap.PNG",     desc: "Ghritkumari sap (Aloe Vera) may help improve digestion, support liver health, and boost hydration." }
+            { name: "Bhringraj Plant (Eclipta alba)",          img: "images/Bhringraj plant.PNG.jpg",    desc: "Bhringraj is a medicinal herb widely used in Ayurveda, known for supporting liver health and hair growth." },
+            { name: "Arjun Bark (Terminalia arjuna)",          img: "images/Arjun Bark.PNG.jpg",         desc: "Arjuna bark contains natural antioxidants that may help strengthen heart muscles and improve blood circulation." },
+            { name: "Makoi Fruit (Solanum nigrum)",            img: "images/Makoi fruit.PNG",            desc: "Makoi, also known as Black Nightshade, may help reduce inflammation and support liver function." },
+            { name: "Tulsi Leaf (Ocimum sanctum)",             img: "images/Tulsi leaf.PNG",             desc: "Tulsi, Holy Basil, is known for boosting immunity and supporting respiratory health." },
+            { name: "Pittapapda Plant (Fumaria officinalis)",  img: "images/Pittapapda plant.PNG",       desc: "Pittapapda is an Ayurvedic herb traditionally used for liver health, skin problems, and body cooling." },
+            { name: "Sarpunkha Panchang (Tephrosia purpurea)",img: "images/Sarpunkha Panchang.PNG.PNG", desc: "Sarpunkha is traditionally known for supporting liver and spleen health, improving digestion, and body detoxification." },
+            { name: "Vidanga Seed (Embelia ribes)",            img: "images/Vidanga seed.PNG",           desc: "Vidanga seeds are widely used for digestive and detox support, with anti-parasitic and antimicrobial properties." },
+            { name: "Ghritkumari Sap (Aloe barbadensis)",     img: "images/Ghritkumari sap.PNG",        desc: "Ghritkumari sap (Aloe Vera) may help improve digestion, support liver health, and boost hydration." }
         ],
         quantities: [
             { label: "110ML Syrup", price: "₹70" },
@@ -175,15 +175,15 @@ const products = [
         icon: "fas fa-bacteria",
         images: ["images/Qoughsol 1.PNG.png","images/Qoughsol 2.PNG.png","images/Qoughsol 3.PNG.png","images/Qoughsol 4.PNG.png"],
         ingredients: [
-            { name: "Vasika Leaves",  img: "images/Vasika leaf.jpg",    desc: "Vasika leaves are a well-known Ayurvedic herb traditionally used to support respiratory and lung health." },
-            { name: "Tulsi Leaf",     img: "images/Tulsi leaf.PNG",     desc: "Tulsi, Holy Basil, is a popular Ayurvedic herb known for boosting immunity and supporting respiratory health." },
-            { name: "Mulethi Rhizome",img: "images/Mulethi rhizome.jpg",desc: "Mulethi (Licorice root) is used in Ayurveda for soothing throat irritation and respiratory support." },
-            { name: "Khareti",        img: "images/Khareti.jpg",        desc: "Khareti is a traditional Ayurvedic herb known for its strengthening and rejuvenating properties." },
-            { name: "Amaltas Pulp",   img: "images/Amaltas pulp.jpg",   desc: "Amaltas pulp is a widely used Ayurvedic ingredient known for its gentle cleansing and digestive-supporting properties." },
-            { name: "Neelophar",      img: "images/Neelophar.jpg",      desc: "Neelophar (Blue Lotus) may help promote relaxation, reduce stress, and support restful sleep." },
-            { name: "Unnab",          img: "images/Unnab.jpg",          desc: "Unnab (Jujube) may help support respiratory health, improve digestion, and strengthen immunity." },
-            { name: "Banafsha",       img: "images/Banafsha.jpg",       desc: "Banafsha (Sweet Violet) may help support respiratory health and relieve cough and throat irritation." },
-            { name: "Peppermint",     img: "images/Peppermint.jpg",     desc: "Peppermint is a refreshing herb known for its cooling and digestive-supporting properties." }
+            { name: "Vasika Leaves (Adhatoda vasica)",      img: "images/Vasika leaf.jpg",     desc: "Vasika leaves are a well-known Ayurvedic herb traditionally used to support respiratory and lung health." },
+            { name: "Tulsi Leaf (Ocimum sanctum)",          img: "images/Tulsi leaf.PNG",      desc: "Tulsi, Holy Basil, is a popular Ayurvedic herb known for boosting immunity and supporting respiratory health." },
+            { name: "Mulethi Rhizome (Glycyrrhiza glabra)", img: "images/Mulethi rhizome.jpg", desc: "Mulethi (Licorice root) is used in Ayurveda for soothing throat irritation and respiratory support." },
+            { name: "Khareti (Sida cordifolia)",            img: "images/Khareti.jpg",         desc: "Khareti is a traditional Ayurvedic herb known for its strengthening and rejuvenating properties." },
+            { name: "Amaltas Pulp (Cassia fistula)",        img: "images/Amaltas pulp.jpg",    desc: "Amaltas pulp is a widely used Ayurvedic ingredient known for its gentle cleansing and digestive-supporting properties." },
+            { name: "Neelophar (Nymphaea stellata)",        img: "images/Neelophar.jpg",       desc: "Neelophar (Blue Lotus) may help promote relaxation, reduce stress, and support restful sleep." },
+            { name: "Unnab (Ziziphus jujuba)",              img: "images/Unnab.jpg",           desc: "Unnab (Jujube) may help support respiratory health, improve digestion, and strengthen immunity." },
+            { name: "Banafsha (Viola odorata)",             img: "images/Banafsha.jpg",        desc: "Banafsha (Sweet Violet) may help support respiratory health and relieve cough and throat irritation." },
+            { name: "Peppermint (Mentha piperita)",         img: "images/Peppermint.jpg",      desc: "Peppermint is a refreshing herb known for its cooling and digestive-supporting properties." }
         ],
         quantities: [{ label: "60ML", price: "₹50" }, { label: "110ML", price: "₹70" }]
     },
@@ -193,15 +193,15 @@ const products = [
         icon: "fas fa-bone",
         images: ["images/Infantol (Babies Tonic)1.PNG.png","images/Infantol (Babies Tonic)2.PNG.png","images/Infantol (Babies Tonic)3.PNG.png","images/Infantol (Babies Tonic)4.PNG.png"],
         ingredients: [
-            { name: "Javitri Leaves",    img: "images/Javitri leaves.jpg",   desc: "Javitri leaves are valued for their aromatic and wellness-supporting properties." },
-            { name: "Pushkarmool Root",  img: "images/Pushkarmool root.jpg", desc: "Pushkarmool root is used to support respiratory and heart health." },
-            { name: "Atis Root",         img: "images/Atis root.jpg",        desc: "Atis root is valued for its digestive and wellness-supporting properties." },
-            { name: "Black Pepper Seeds",img: "images/Black Pepper seeds.jpg",desc: "Black Pepper seeds may help improve digestion and boost immunity." },
-            { name: "Unnab",             img: "images/Unnab.jpg",            desc: "Unnab (Jujube) supports respiratory health, digestion, and immunity." },
-            { name: "Nagarmotha Root",   img: "images/Nagarmotha root.jpg",  desc: "Nagarmotha root is known for its digestive and detoxifying properties." },
-            { name: "Kantkari",          img: "images/Kantkari.jpg",         desc: "Kantkari is widely used for respiratory health support." },
-            { name: "Baheda Root",       img: "images/Baheda root.jpg",      desc: "Baheda root is valued for its detoxifying and rejuvenating properties." },
-            { name: "Tulsi Leaf",        img: "images/Tulsi leaf.PNG",       desc: "Tulsi boosts immunity and supports respiratory health." }
+            { name: "Javitri Leaves (Myristica fragrans)",         img: "images/Javitri leaves.jpg",    desc: "Javitri leaves are valued for their aromatic and wellness-supporting properties." },
+            { name: "Pushkarmool Root (Inula racemosa)",           img: "images/Pushkarmool root.jpg",  desc: "Pushkarmool root is used to support respiratory and heart health." },
+            { name: "Atis Root (Aconitum heterophyllum)",          img: "images/Atis root.jpg",         desc: "Atis root is valued for its digestive and wellness-supporting properties." },
+            { name: "Black Pepper Seeds (Piper nigrum)",           img: "images/Black Pepper seeds.jpg",desc: "Black Pepper seeds may help improve digestion and boost immunity." },
+            { name: "Unnab (Ziziphus jujuba)",                     img: "images/Unnab.jpg",             desc: "Unnab (Jujube) supports respiratory health, digestion, and immunity." },
+            { name: "Nagarmotha Root (Cyperus rotundus)",          img: "images/Nagarmotha root.jpg",   desc: "Nagarmotha root is known for its digestive and detoxifying properties." },
+            { name: "Kantkari (Solanum xanthocarpum)",             img: "images/Kantkari.jpg",          desc: "Kantkari is widely used for respiratory health support." },
+            { name: "Baheda Root (Terminalia bellirica)",          img: "images/Baheda root.jpg",       desc: "Baheda root is valued for its detoxifying and rejuvenating properties." },
+            { name: "Tulsi Leaf (Ocimum sanctum)",                 img: "images/Tulsi leaf.PNG",        desc: "Tulsi boosts immunity and supports respiratory health." }
         ],
         quantities: [
             { label: "60ML Syrup",  price: "₹55" },
@@ -214,15 +214,15 @@ const products = [
         icon: "fas fa-heart",
         images: ["images/Infantol1.PNG.png","images/Infantol2.PNG.png","images/Infantol3.PNG.png","images/Infantol4.PNG.png"],
         ingredients: [
-            { name: "Pokharmool Root",  img: "images/Pokharmool root.jpg",  desc: "Pokharmool root is valued for supporting respiratory and heart health." },
-            { name: "Atees Root",       img: "images/Atees root.jpg",       desc: "Atees root supports digestion, appetite, and overall wellness." },
-            { name: "Pepper Seed",      img: "images/pepper seed.jpg",      desc: "Pepper seeds support digestion, metabolism, and immunity." },
-            { name: "Unnab",            img: "images/Unnab.jpg",            desc: "Unnab (Jujube) supports respiratory health and immunity." },
-            { name: "Nagarmotha Root",  img: "images/Nagarmotha root.jpg",  desc: "Nagarmotha root supports digestion and detoxification." },
-            { name: "Kantkari Herb",    img: "images/Kantkari herb.jpg",    desc: "Kantkari supports respiratory wellness." },
-            { name: "Baheda Root",      img: "images/Baheda root.jpg",      desc: "Baheda root supports detoxification and respiratory health." },
-            { name: "Tulsi Leaf",       img: "images/Tulsi leaf.PNG",       desc: "Tulsi boosts immunity and supports respiratory health." },
-            { name: "Bhringraj Seed",   img: "images/Bhringraj seed.jpg",   desc: "Bhringraj seeds support hair health, liver function, and overall wellness." }
+            { name: "Pokharmool Root (Inula racemosa)",       img: "images/Pokharmool root.jpg",  desc: "Pokharmool root is valued for supporting respiratory and heart health." },
+            { name: "Atees Root (Aconitum heterophyllum)",    img: "images/Atees root.jpg",        desc: "Atees root supports digestion, appetite, and overall wellness." },
+            { name: "Pepper Seed (Piper nigrum)",             img: "images/pepper seed.jpg",       desc: "Pepper seeds support digestion, metabolism, and immunity." },
+            { name: "Unnab (Ziziphus jujuba)",                img: "images/Unnab.jpg",             desc: "Unnab (Jujube) supports respiratory health and immunity." },
+            { name: "Nagarmotha Root (Cyperus rotundus)",     img: "images/Nagarmotha root.jpg",   desc: "Nagarmotha root supports digestion and detoxification." },
+            { name: "Kantkari Herb (Solanum xanthocarpum)",   img: "images/Kantkari herb.jpg",     desc: "Kantkari supports respiratory wellness." },
+            { name: "Baheda Root (Terminalia bellirica)",     img: "images/Baheda root.jpg",       desc: "Baheda root supports detoxification and respiratory health." },
+            { name: "Tulsi Leaf (Ocimum sanctum)",            img: "images/Tulsi leaf.PNG",        desc: "Tulsi boosts immunity and supports respiratory health." },
+            { name: "Bhringraj Seed (Eclipta alba)",          img: "images/Bhringraj seed.jpg",    desc: "Bhringraj seeds support hair health, liver function, and overall wellness." }
         ],
         quantities: [{ label: "100ML", price: "₹70" }, { label: "200ML", price: "₹100" }]
     },
@@ -232,15 +232,15 @@ const products = [
         icon: "fas fa-bolt",
         images: ["images/Energyon1.png","images/Energyon2.png","images/Energyon3.png","images/Energyon4.png"],
         ingredients: [
-            { name: "Ashwagandha Root",   img: "images/Ashwagandha Root.jpg",   desc: "Ashwagandha root is known for its adaptogenic and rejuvenating properties." },
-            { name: "Shatawari Root",     img: "images/Shatawari Root.jpg",     desc: "Shatawari root supports vitality, hormonal balance, and overall wellness." },
-            { name: "Kavach Seed",        img: "images/Kavach Seed.jpg",        desc: "Kavach seed supports strength, stamina, and nervous system health." },
-            { name: "Vidarikand Root",    img: "images/Vidarikand Root.jpg",    desc: "Vidarikand root supports energy, physical strength, and immunity." },
-            { name: "Shankhpushpi Herb",  img: "images/Shankhpushpi Herb.jpg",  desc: "Shankhpushpi supports memory, focus, and mental wellness." },
-            { name: "Brahmi Booti",       img: "images/Brahmi Booti.jpg",       desc: "Brahmi supports memory, concentration, and nervous system wellness." },
-            { name: "Amla Fruit",         img: "images/Amla Fruit.jpg",         desc: "Amla is rich in antioxidants and Vitamin C, supporting immunity and digestion." },
-            { name: "Punarnava Root",     img: "images/Punarnava Root.jpg",     desc: "Punarnava root supports kidney health, digestion, and overall body wellness." },
-            { name: "Arjuna Bark",        img: "images/Arjuna Bark.jpg",        desc: "Arjuna bark supports heart health, circulation, and overall vitality." }
+            { name: "Ashwagandha Root (Withania somnifera)",    img: "images/Ashwagandha Root.jpg",   desc: "Ashwagandha root is known for its adaptogenic and rejuvenating properties." },
+            { name: "Shatawari Root (Asparagus racemosus)",     img: "images/Shatawari Root.jpg",     desc: "Shatawari root supports vitality, hormonal balance, and overall wellness." },
+            { name: "Kavach Seed (Mucuna pruriens)",            img: "images/Kavach Seed.jpg",        desc: "Kavach seed supports strength, stamina, and nervous system health." },
+            { name: "Vidarikand Root (Pueraria tuberosa)",      img: "images/Vidarikand Root.jpg",    desc: "Vidarikand root supports energy, physical strength, and immunity." },
+            { name: "Shankhpushpi Herb (Convolvulus pluricaulis)", img: "images/Shankhpushpi Herb.jpg", desc: "Shankhpushpi supports memory, focus, and mental wellness." },
+            { name: "Brahmi Booti (Bacopa monnieri)",           img: "images/Brahmi Booti.jpg",       desc: "Brahmi supports memory, concentration, and nervous system wellness." },
+            { name: "Amla Fruit (Phyllanthus emblica)",         img: "images/Amla Fruit.jpg",         desc: "Amla is rich in antioxidants and Vitamin C, supporting immunity and digestion." },
+            { name: "Punarnava Root (Boerhavia diffusa)",       img: "images/Punarnava Root.jpg",     desc: "Punarnava root supports kidney health, digestion, and overall body wellness." },
+            { name: "Arjuna Bark (Terminalia arjuna)",          img: "images/Arjuna Bark.jpg",        desc: "Arjuna bark supports heart health, circulation, and overall vitality." }
         ],
         quantities: [
             { label: "100ML Syrup", price: "₹70" },
@@ -254,15 +254,15 @@ const products = [
         icon: "fas fa-female",
         images: ["images/M.C Plus syrup1.PNG.png","images/M.C Plus syrup2.PNG.png","images/M.C Plus syrup3.PNG.png","images/M.C Plus syrup4.PNG.png"],
         ingredients: [
-            { name: "Kalaunji",    img: "images/Kalaunji.PNG.png",    desc: "Kalonji (Black Seed) may help support immunity, digestion, and heart health." },
-            { name: "Kapasmool",   img: "images/Kapasmool.PNG.png",   desc: "Kapasmool supports women's health, digestion, and pain relief." },
-            { name: "Olatkambal",  img: "images/Olatkambal.PNG.png",  desc: "Olatkambal root supports women's reproductive health and healthy menstrual cycles." },
-            { name: "Gajar Seed",  img: "images/Gajar seed.PNG.png",  desc: "Gajar seeds support digestion, urinary health, and body balance." },
-            { name: "Indrayan",    img: "images/Indrayan.PNG.png",    desc: "Indrayan supports detoxification and digestive health." },
-            { name: "Soya",        img: "images/Soya.PNG.png",        desc: "Soya seeds are rich in protein, fiber, vitamins, and antioxidants." },
-            { name: "Kala Til",    img: "images/Kala Til.PNG.jpg",    desc: "Kala Til (Black Sesame) supports bone strength, heart health, and digestion." },
-            { name: "Muli",        img: "images/Muli.PNG.png",        desc: "Muli seeds support digestion and liver function." },
-            { name: "Sonth",       img: "images/Sonth.PNG.png.jpg",   desc: "Sonth (Dry Ginger) improves digestion and reduces inflammation." }
+            { name: "Kalaunji (Nigella sativa)",          img: "images/Kalaunji.PNG.png",    desc: "Kalonji (Black Seed) may help support immunity, digestion, and heart health." },
+            { name: "Kapasmool (Gossypium herbaceum)",    img: "images/Kapasmool.PNG.png",   desc: "Kapasmool supports women's health, digestion, and pain relief." },
+            { name: "Olatkambal (Abroma augusta)",        img: "images/Olatkambal.PNG.png",  desc: "Olatkambal root supports women's reproductive health and healthy menstrual cycles." },
+            { name: "Gajar Seed (Daucus carota)",         img: "images/Gajar seed.PNG.png",  desc: "Gajar seeds support digestion, urinary health, and body balance." },
+            { name: "Indrayan (Citrullus colocynthis)",   img: "images/Indrayan.PNG.png",    desc: "Indrayan supports detoxification and digestive health." },
+            { name: "Soya (Glycine max)",                 img: "images/Soya.PNG.png",        desc: "Soya seeds are rich in protein, fiber, vitamins, and antioxidants." },
+            { name: "Kala Til (Sesamum indicum)",         img: "images/Kala Til.PNG.jpg",    desc: "Kala Til (Black Sesame) supports bone strength, heart health, and digestion." },
+            { name: "Muli (Raphanus sativus)",            img: "images/Muli.PNG.png",        desc: "Muli seeds support digestion and liver function." },
+            { name: "Sonth (Zingiber officinale)",        img: "images/Sonth.PNG.png.jpg",   desc: "Sonth (Dry Ginger) improves digestion and reduces inflammation." }
         ],
         quantities: [
             { label: "100ML Syrup", price: "₹80" },
@@ -276,15 +276,15 @@ const products = [
         icon: "fas fa-baby",
         images: ["images/Quality lal tel1.PNG.png","images/Quality lal tel2.PNG.png","images/Quality lal tel3.PNG.png","images/Quality lal tel4.PNG.png"],
         ingredients: [
-            { name: "Shankhapushpi",    img: "images/Shankhapushpi.jpg",     desc: "Shankhapushpi supports brain and nervous system health." },
-            { name: "Manjistha Root",   img: "images/Manjistha root.jpg",    desc: "Manjistha root supports healthy skin and natural body cleansing." },
-            { name: "Daruharidra Root", img: "images/Daruharidra root.jpg",  desc: "Daruharidra root supports liver health, healthy skin, and immunity." },
-            { name: "Arjun Bark",       img: "images/Arjun Bark.PNG.jpg",    desc: "Arjuna bark supports heart health and blood circulation." },
-            { name: "Urad Seeds",       img: "images/Urad seeds.jpg",        desc: "Urad seeds are highly nutritious, supporting strength and digestion." },
-            { name: "Ratanjot",         img: "images/Ratanjot.jpg",          desc: "Ratanjot supports skin health with cooling and anti-inflammatory properties." },
-            { name: "Karpoor",          img: "images/Karpoor.jpg",           desc: "Karpoor (Camphor) supports respiratory comfort and relaxation." },
-            { name: "Neem Oil",         img: "images/Neem oil.jpg",          desc: "Neem oil supports healthy skin and protection from infections." },
-            { name: "Kala Til Oil",     img: "images/Til tel.jpg",           desc: "Sesame oil supports joint and bone health and promotes overall strength." }
+            { name: "Shankhapushpi (Convolvulus pluricaulis)", img: "images/Shankhapushpi.jpg",    desc: "Shankhapushpi supports brain and nervous system health." },
+            { name: "Manjistha Root (Rubia cordifolia)",       img: "images/Manjistha root.jpg",   desc: "Manjistha root supports healthy skin and natural body cleansing." },
+            { name: "Daruharidra Root (Berberis aristata)",    img: "images/Daruharidra root.jpg", desc: "Daruharidra root supports liver health, healthy skin, and immunity." },
+            { name: "Arjun Bark (Terminalia arjuna)",          img: "images/Arjun Bark.PNG.jpg",   desc: "Arjuna bark supports heart health and blood circulation." },
+            { name: "Urad Seeds (Vigna mungo)",                img: "images/Urad seeds.jpg",       desc: "Urad seeds are highly nutritious, supporting strength and digestion." },
+            { name: "Ratanjot (Alkanna tinctoria)",            img: "images/Ratanjot.jpg",         desc: "Ratanjot supports skin health with cooling and anti-inflammatory properties." },
+            { name: "Karpoor (Cinnamomum camphora)",           img: "images/Karpoor.jpg",          desc: "Karpoor (Camphor) supports respiratory comfort and relaxation." },
+            { name: "Neem Oil (Azadirachta indica)",           img: "images/Neem oil.jpg",         desc: "Neem oil supports healthy skin and protection from infections." },
+            { name: "Kala Til Oil (Sesamum indicum)",          img: "images/Til tel.jpg",          desc: "Sesame oil supports joint and bone health and promotes overall strength." }
         ],
         quantities: [{ label: "50ML", price: "₹50" }, { label: "100ML", price: "₹80" }]
     },
@@ -294,14 +294,14 @@ const products = [
         icon: "fas fa-baby",
         images: [],
         ingredients: [
-            { name: "Bhringraj Plant",    img: "images/Bhringraj plant.PNG.jpg",   desc: "Bhringraj supports liver health and overall wellness." },
-            { name: "Arjun Bark",         img: "images/Arjun Bark.PNG.jpg",        desc: "Arjuna bark supports heart health and blood circulation." },
-            { name: "Makoi Fruit",        img: "images/Makoi fruit.PNG",           desc: "Makoi supports liver function and improves digestion." },
-            { name: "Tulsi Leaf",         img: "images/Tulsi leaf.PNG",            desc: "Tulsi boosts immunity and supports respiratory health." },
-            { name: "Pittapapda Plant",   img: "images/Pittapapda plant.PNG",      desc: "Pittapapda supports liver health, skin wellness, and body cooling." },
-            { name: "Sarpunkha Panchang", img: "images/Sarpunkha Panchang.PNG.PNG",desc: "Sarpunkha supports liver and spleen health and body detoxification." },
-            { name: "Vidanga Seed",       img: "images/Vidanga seed.PNG",          desc: "Vidanga seeds support gut health and natural body cleansing." },
-            { name: "Ghritkumari Sap",    img: "images/Ghritkumari sap.PNG",       desc: "Aloe Vera sap supports liver health, digestion, and hydration." }
+            { name: "Bhringraj Plant (Eclipta alba)",          img: "images/Bhringraj plant.PNG.jpg",    desc: "Bhringraj supports liver health and overall wellness." },
+            { name: "Arjun Bark (Terminalia arjuna)",          img: "images/Arjun Bark.PNG.jpg",         desc: "Arjuna bark supports heart health and blood circulation." },
+            { name: "Makoi Fruit (Solanum nigrum)",            img: "images/Makoi fruit.PNG",            desc: "Makoi supports liver function and improves digestion." },
+            { name: "Tulsi Leaf (Ocimum sanctum)",             img: "images/Tulsi leaf.PNG",             desc: "Tulsi boosts immunity and supports respiratory health." },
+            { name: "Pittapapda Plant (Fumaria officinalis)",  img: "images/Pittapapda plant.PNG",       desc: "Pittapapda supports liver health, skin wellness, and body cooling." },
+            { name: "Sarpunkha Panchang (Tephrosia purpurea)",img: "images/Sarpunkha Panchang.PNG.PNG", desc: "Sarpunkha supports liver and spleen health and body detoxification." },
+            { name: "Vidanga Seed (Embelia ribes)",            img: "images/Vidanga seed.PNG",           desc: "Vidanga seeds support gut health and natural body cleansing." },
+            { name: "Ghritkumari Sap (Aloe barbadensis)",     img: "images/Ghritkumari sap.PNG",        desc: "Aloe Vera sap supports liver health, digestion, and hydration." }
         ],
         quantities: [{ label: "100ML", price: "₹43" }]
     },
@@ -311,14 +311,14 @@ const products = [
         icon: "fas fa-spray-can",
         images: ["images/DADOL1.png","images/DADOL2.png"],
         ingredients: [
-            { name: "Gandhak",          img: "images/Gandhak.jpg",           desc: "Gandhak (purified Sulphur) supports healthy skin and reduces itching." },
-            { name: "Babchi Oil",       img: "images/Babchi Oil.jpg",        desc: "Babchi Oil supports healthy skin texture and skin balance." },
-            { name: "Coaltar Solution", img: "images/Coaltar Solution.jpg",  desc: "Coaltar Solution soothes dry and irritated skin conditions." },
-            { name: "Neem Oil",         img: "images/Neem Oil.jpg",          desc: "Neem Oil supports skin health and reduces irritation." },
-            { name: "Samudraphene",     img: "images/Samudraphene.jpg",      desc: "Samudraphene supports skin comfort and wellness." },
-            { name: "Maulshri Flowers", img: "images/Maulshri Flowers.jpg",  desc: "Maulshri Flowers support skin nourishment and freshness." },
-            { name: "Babool Flowers",   img: "images/Babool Flowers.jpg",    desc: "Babool Flowers support healthy skin and natural balance." },
-            { name: "Paraffin Base",    img: "images/Paraffin Base.jpg",     desc: "Paraffin Base keeps skin soft and supports hydration." }
+            { name: "Gandhak (Sulphur purificatum)",      img: "images/Gandhak.jpg",           desc: "Gandhak (purified Sulphur) supports healthy skin and reduces itching." },
+            { name: "Babchi Oil (Psoralea corylifolia)",  img: "images/Babchi Oil.jpg",         desc: "Babchi Oil supports healthy skin texture and skin balance." },
+            { name: "Coaltar Solution (Coal Tar)",        img: "images/Coaltar Solution.jpg",   desc: "Coaltar Solution soothes dry and irritated skin conditions." },
+            { name: "Neem Oil (Azadirachta indica)",      img: "images/Neem Oil.jpg",           desc: "Neem Oil supports skin health and reduces irritation." },
+            { name: "Samudraphene (Sepia officinalis)",   img: "images/Samudraphene.jpg",       desc: "Samudraphene supports skin comfort and wellness." },
+            { name: "Maulshri Flowers (Mimusops elengi)", img: "images/Maulshri Flowers.jpg",  desc: "Maulshri Flowers support skin nourishment and freshness." },
+            { name: "Babool Flowers (Acacia nilotica)",   img: "images/Babool Flowers.jpg",     desc: "Babool Flowers support healthy skin and natural balance." },
+            { name: "Paraffin Base (Paraffinum liquidum)",img: "images/Paraffin Base.jpg",      desc: "Paraffin Base keeps skin soft and supports hydration." }
         ],
         quantities: [{ label: "10GM", price: "₹45" }]
     },
@@ -328,14 +328,14 @@ const products = [
         icon: "fas fa-bone",
         images: ["images/Zoint oil1.PNG.png","images/Zoint oil2.PNG.png","images/Zoint oil3.PNG.png","images/Zoint oil4.PNG.png"],
         ingredients: [
-            { name: "Ashwagandha Root",  img: "images/Ashwagangha root.jpg",  desc: "Ashwagandha root supports energy, stamina, and overall wellness." },
-            { name: "Karpoor Crystal",   img: "images/Karpoor Crystal.jpg",   desc: "Karpoor crystal supports respiratory comfort and relaxation." },
-            { name: "Mash (Urad) Seed",  img: "images/Mash Urad Seed.jpg",   desc: "Urad seeds are rich in protein and support strength and digestion." },
-            { name: "Jatamansi Plant",   img: "images/Jatamansi Plant.jpg",   desc: "Jatamansi supports calming, restful sleep, and mental clarity." },
-            { name: "Kuchala Seed",      img: "images/Kuchala Seed.jpg",      desc: "Kuchala seeds support nervous system function and joint comfort." },
-            { name: "Dhatura Leaf",      img: "images/Dhatura Leaf.jpg",      desc: "Dhatura leaves support pain and respiratory relief." },
-            { name: "Aama Haldi Root",   img: "images/Aama Haldi Root.jpg",   desc: "Aama Haldi root supports digestion and reduces inflammation." },
-            { name: "Shatawari Root",    img: "images/Shatawari Root.jpg",    desc: "Shatawari root supports hormonal balance and overall rejuvenation." }
+            { name: "Ashwagandha Root (Withania somnifera)",  img: "images/Ashwagangha root.jpg",  desc: "Ashwagandha root supports energy, stamina, and overall wellness." },
+            { name: "Karpoor Crystal (Cinnamomum camphora)",  img: "images/Karpoor Crystal.jpg",   desc: "Karpoor crystal supports respiratory comfort and relaxation." },
+            { name: "Mash Urad Seed (Vigna mungo)",           img: "images/Mash Urad Seed.jpg",    desc: "Urad seeds are rich in protein and support strength and digestion." },
+            { name: "Jatamansi Plant (Nardostachys jatamansi)", img: "images/Jatamansi Plant.jpg", desc: "Jatamansi supports calming, restful sleep, and mental clarity." },
+            { name: "Kuchala Seed (Strychnos nux-vomica)",    img: "images/Kuchala Seed.jpg",      desc: "Kuchala seeds support nervous system function and joint comfort." },
+            { name: "Dhatura Leaf (Datura stramonium)",       img: "images/Dhatura Leaf.jpg",      desc: "Dhatura leaves support pain and respiratory relief." },
+            { name: "Aama Haldi Root (Curcuma amada)",        img: "images/Aama Haldi Root.jpg",   desc: "Aama Haldi root supports digestion and reduces inflammation." },
+            { name: "Shatawari Root (Asparagus racemosus)",   img: "images/Shatawari Root.jpg",    desc: "Shatawari root supports hormonal balance and overall rejuvenation." }
         ],
         quantities: [
             { label: "10ML", price: "₹25" },
@@ -349,14 +349,14 @@ const products = [
         icon: "fas fa-seedling",
         images: ["images/Earoil1.PNG.png","images/Earoil2.PNG.png","images/Earoil3.PNG.png","images/Earoil4.PNG.png"],
         ingredients: [
-            { name: "Sonapatha",  img: "images/Sonapatha.jpg",  desc: "Sonapatha supports joint health, digestion, and respiratory wellness." },
-            { name: "Ankol",      img: "images/Ankol.jpg",      desc: "Ankol supports skin health, joint comfort, and digestion." },
-            { name: "Kakjangha",  img: "images/Kakjangha.jpg",  desc: "Kakjangha supports joint health and overall physical wellness." },
-            { name: "Nagdaun",    img: "images/Nagdaun.jpg",    desc: "Nagdaun supports digestion, respiratory comfort, and detoxification." },
-            { name: "Arjuna",     img: "images/Arjuna.jpg",     desc: "Arjuna supports healthy blood circulation and heart wellness." },
-            { name: "Surajmukhi", img: "images/Surajmukhi.jpg", desc: "Surajmukhi (Sunflower) supports heart health and energy levels." },
-            { name: "Nirgundi",   img: "images/Nirgundi.jpg",   desc: "Nirgundi supports joint comfort and respiratory wellness." },
-            { name: "Lahsun",     img: "images/Lahsun.jpg",     desc: "Lahsun (Garlic) supports heart health, digestion, and immunity." }
+            { name: "Sonapatha (Oroxylum indicum)",       img: "images/Sonapatha.jpg",   desc: "Sonapatha supports joint health, digestion, and respiratory wellness." },
+            { name: "Ankol (Alangium salvifolium)",       img: "images/Ankol.jpg",       desc: "Ankol supports skin health, joint comfort, and digestion." },
+            { name: "Kakjangha (Uraria picta)",           img: "images/Kakjangha.jpg",   desc: "Kakjangha supports joint health and overall physical wellness." },
+            { name: "Nagdaun (Premna integrifolia)",      img: "images/Nagdaun.jpg",     desc: "Nagdaun supports digestion, respiratory comfort, and detoxification." },
+            { name: "Arjuna (Terminalia arjuna)",         img: "images/Arjuna.jpg",      desc: "Arjuna supports healthy blood circulation and heart wellness." },
+            { name: "Surajmukhi (Helianthus annuus)",     img: "images/Surajmukhi.jpg",  desc: "Surajmukhi (Sunflower) supports heart health and energy levels." },
+            { name: "Nirgundi (Vitex negundo)",           img: "images/Nirgundi.jpg",    desc: "Nirgundi supports joint comfort and respiratory wellness." },
+            { name: "Lahsun (Allium sativum)",            img: "images/Lahsun.jpg",      desc: "Lahsun (Garlic) supports heart health, digestion, and immunity." }
         ],
         quantities: [{ label: "5ML", price: "₹45" }]
     },
@@ -366,15 +366,15 @@ const products = [
         icon: "fas fa-hand-holding-medical",
         images: ["images/Mangal Prabhat1.PNG.png","images/Mangal Prabhat2.PNG.png","images/Mangal Prabhat3.PNG.png"],
         ingredients: [
-            { name: "Senna Leaf",    img: "images/Senna Leaf.jpg",    desc: "Senna leaves support natural cleansing and digestive health." },
-            { name: "Ajwain Seed",   img: "images/Ajwain Seed.jpg",   desc: "Ajwain seeds relieve indigestion, bloating, and gas." },
-            { name: "Kala Namak",    img: "images/Kala Namak.jpg",    desc: "Kala Namak (Black Salt) supports digestion and appetite." },
-            { name: "Nisoth",        img: "images/Nisoth.jpg",        desc: "Nisoth supports detoxification and healthy bowel function." },
-            { name: "Amaltash Pulp", img: "images/Amaltash Pulp.jpg", desc: "Amaltash pulp supports constipation relief and bowel health." },
-            { name: "Gulab Flowers", img: "images/Gulab Flowers.jpg", desc: "Gulab flowers support skin health and relaxation." },
-            { name: "Saunf",         img: "images/Saunf.jpg",         desc: "Saunf (Fennel) improves digestion, freshens breath, and reduces acidity." },
-            { name: "Sentha Namak",  img: "images/Sentha Namak.jpg",  desc: "Sentha Namak (Rock Salt) supports digestion and mineral balance." },
-            { name: "Yastimadhu",    img: "images/Yastimadhu.jpg",    desc: "Yastimadhu (Mulethi/Licorice) supports respiratory health and digestion." }
+            { name: "Senna Leaf (Cassia angustifolia)",           img: "images/Senna Leaf.jpg",    desc: "Senna leaves support natural cleansing and digestive health." },
+            { name: "Ajwain Seed (Trachyspermum ammi)",           img: "images/Ajwain Seed.jpg",   desc: "Ajwain seeds relieve indigestion, bloating, and gas." },
+            { name: "Kala Namak (Black Rock Salt)",               img: "images/Kala Namak.jpg",    desc: "Kala Namak (Black Salt) supports digestion and appetite." },
+            { name: "Nisoth (Operculina turpethum)",              img: "images/Nisoth.jpg",        desc: "Nisoth supports detoxification and healthy bowel function." },
+            { name: "Amaltash Pulp (Cassia fistula)",             img: "images/Amaltash Pulp.jpg", desc: "Amaltash pulp supports constipation relief and bowel health." },
+            { name: "Gulab Flowers (Rosa damascena)",             img: "images/Gulab Flowers.jpg", desc: "Gulab flowers support skin health and relaxation." },
+            { name: "Saunf (Foeniculum vulgare)",                 img: "images/Saunf.jpg",         desc: "Saunf (Fennel) improves digestion, freshens breath, and reduces acidity." },
+            { name: "Sentha Namak (Rock Salt)",                   img: "images/Sentha Namak.jpg",  desc: "Sentha Namak (Rock Salt) supports digestion and mineral balance." },
+            { name: "Yastimadhu (Glycyrrhiza glabra)",            img: "images/Yastimadhu.jpg",    desc: "Yastimadhu (Mulethi/Licorice) supports respiratory health and digestion." }
         ],
         quantities: [{ label: "10GM", price: "₹16" }, { label: "50GM", price: "₹55" }]
     },
@@ -384,14 +384,14 @@ const products = [
         icon: "fas fa-pills",
         images: ["images/Amrit.PNG.png"],
         ingredients: [
-            { name: "Bhringraj Plant",    img: "images/Bhringraj plant.PNG.jpg",   desc: "Bhringraj supports liver health and overall wellness." },
-            { name: "Arjun Bark",         img: "images/Arjun Bark.PNG.jpg",        desc: "Arjuna bark supports heart health and blood circulation." },
-            { name: "Makoi Fruit",        img: "images/Makoi fruit.PNG",           desc: "Makoi supports liver function and improves digestion." },
-            { name: "Tulsi Leaf",         img: "images/Tulsi leaf.PNG",            desc: "Tulsi boosts immunity and supports respiratory health." },
-            { name: "Pittapapda Plant",   img: "images/Pittapapda plant.PNG",      desc: "Pittapapda supports liver health and body cooling." },
-            { name: "Sarpunkha Panchang", img: "images/Sarpunkha Panchang.PNG.PNG",desc: "Sarpunkha supports liver and spleen health and detoxification." },
-            { name: "Vidanga Seed",       img: "images/Vidanga seed.PNG",          desc: "Vidanga seeds support gut health and natural body cleansing." },
-            { name: "Ghritkumari Sap",    img: "images/Ghritkumari sap.PNG",       desc: "Aloe Vera sap supports liver health, digestion, and hydration." }
+            { name: "Bhringraj Plant (Eclipta alba)",          img: "images/Bhringraj plant.PNG.jpg",    desc: "Bhringraj supports liver health and overall wellness." },
+            { name: "Arjun Bark (Terminalia arjuna)",          img: "images/Arjun Bark.PNG.jpg",         desc: "Arjuna bark supports heart health and blood circulation." },
+            { name: "Makoi Fruit (Solanum nigrum)",            img: "images/Makoi fruit.PNG",            desc: "Makoi supports liver function and improves digestion." },
+            { name: "Tulsi Leaf (Ocimum sanctum)",             img: "images/Tulsi leaf.PNG",             desc: "Tulsi boosts immunity and supports respiratory health." },
+            { name: "Pittapapda Plant (Fumaria officinalis)",  img: "images/Pittapapda plant.PNG",       desc: "Pittapapda supports liver health and body cooling." },
+            { name: "Sarpunkha Panchang (Tephrosia purpurea)",img: "images/Sarpunkha Panchang.PNG.PNG", desc: "Sarpunkha supports liver and spleen health and detoxification." },
+            { name: "Vidanga Seed (Embelia ribes)",            img: "images/Vidanga seed.PNG",           desc: "Vidanga seeds support gut health and natural body cleansing." },
+            { name: "Ghritkumari Sap (Aloe barbadensis)",     img: "images/Ghritkumari sap.PNG",        desc: "Aloe Vera sap supports liver health, digestion, and hydration." }
         ],
         quantities: [{ label: "25 Tabs", price: "₹40" }, { label: "500 Tabs", price: "₹500" }]
     },
@@ -401,14 +401,14 @@ const products = [
         icon: "fas fa-thermometer-half",
         images: [],
         ingredients: [
-            { name: "Bhringraj Plant",    img: "images/Bhringraj plant.PNG.jpg",   desc: "Bhringraj supports liver health and overall wellness." },
-            { name: "Arjun Bark",         img: "images/Arjun Bark.PNG.jpg",        desc: "Arjuna bark supports heart health and blood circulation." },
-            { name: "Makoi Fruit",        img: "images/Makoi fruit.PNG",           desc: "Makoi supports liver function and improves digestion." },
-            { name: "Tulsi Leaf",         img: "images/Tulsi leaf.PNG",            desc: "Tulsi boosts immunity and supports respiratory health." },
-            { name: "Pittapapda Plant",   img: "images/Pittapapda plant.PNG",      desc: "Pittapapda supports liver health and body cooling." },
-            { name: "Sarpunkha Panchang", img: "images/Sarpunkha Panchang.PNG.PNG",desc: "Sarpunkha supports liver and spleen health and detoxification." },
-            { name: "Vidanga Seed",       img: "images/Vidanga seed.PNG",          desc: "Vidanga seeds support gut health and natural body cleansing." },
-            { name: "Ghritkumari Sap",    img: "images/Ghritkumari sap.PNG",       desc: "Aloe Vera sap supports liver health, digestion, and hydration." }
+            { name: "Bhringraj Plant (Eclipta alba)",          img: "images/Bhringraj plant.PNG.jpg",    desc: "Bhringraj supports liver health and overall wellness." },
+            { name: "Arjun Bark (Terminalia arjuna)",          img: "images/Arjun Bark.PNG.jpg",         desc: "Arjuna bark supports heart health and blood circulation." },
+            { name: "Makoi Fruit (Solanum nigrum)",            img: "images/Makoi fruit.PNG",            desc: "Makoi supports liver function and improves digestion." },
+            { name: "Tulsi Leaf (Ocimum sanctum)",             img: "images/Tulsi leaf.PNG",             desc: "Tulsi boosts immunity and supports respiratory health." },
+            { name: "Pittapapda Plant (Fumaria officinalis)",  img: "images/Pittapapda plant.PNG",       desc: "Pittapapda supports liver health and body cooling." },
+            { name: "Sarpunkha Panchang (Tephrosia purpurea)",img: "images/Sarpunkha Panchang.PNG.PNG", desc: "Sarpunkha supports liver and spleen health and detoxification." },
+            { name: "Vidanga Seed (Embelia ribes)",            img: "images/Vidanga seed.PNG",           desc: "Vidanga seeds support gut health and natural body cleansing." },
+            { name: "Ghritkumari Sap (Aloe barbadensis)",     img: "images/Ghritkumari sap.PNG",        desc: "Aloe Vera sap supports liver health, digestion, and hydration." }
         ],
         quantities: [{ label: "30ML", price: "₹29" }]
     },
@@ -418,13 +418,13 @@ const products = [
         icon: "fas fa-dumbbell",
         images: ["images/Mal Mix.PNG.png"],
         ingredients: [
-            { name: "Agnihas Herb",  img: "images/Agnihas Herb.jpg",  desc: "Agnihas Herb supports digestion, metabolism, and natural detoxification." },
-            { name: "Bindal Fruit",  img: "images/Bindal Fruit.jpg",  desc: "Bindal Fruit supports digestive health and body strength." },
-            { name: "Kanchana",      img: "images/Kanchana.jpg",      desc: "Kanchana supports glandular health and healthy metabolism." },
-            { name: "Guduchi Root",  img: "images/Guduchi Root.jpg",  desc: "Guduchi (Giloy) supports immunity, digestion, and energy levels." },
-            { name: "Chiretta Fruit",img: "images/Chiretta Fruit.jpg",desc: "Chiretta Fruit supports liver wellness and natural detoxification." },
-            { name: "Nagpheni",      img: "images/Nagpheni.jpg",      desc: "Nagpheni supports digestion, body hydration, and skin wellness." },
-            { name: "Shankhauli",    img: "images/Shankhauli.jpg",    desc: "Shankhauli supports digestion, body strength, and overall wellness." }
+            { name: "Agnihas Herb (Helicteres isora)",      img: "images/Agnihas Herb.jpg",   desc: "Agnihas Herb supports digestion, metabolism, and natural detoxification." },
+            { name: "Bindal Fruit (Ziziphus nummularia)",   img: "images/Bindal Fruit.jpg",   desc: "Bindal Fruit supports digestive health and body strength." },
+            { name: "Kanchana (Bauhinia variegata)",        img: "images/Kanchana.jpg",       desc: "Kanchana supports glandular health and healthy metabolism." },
+            { name: "Guduchi Root (Tinospora cordifolia)",  img: "images/Guduchi Root.jpg",   desc: "Guduchi (Giloy) supports immunity, digestion, and energy levels." },
+            { name: "Chiretta Fruit (Swertia chirata)",     img: "images/Chiretta Fruit.jpg", desc: "Chiretta Fruit supports liver wellness and natural detoxification." },
+            { name: "Nagpheni (Opuntia elatior)",           img: "images/Nagpheni.jpg",       desc: "Nagpheni supports digestion, body hydration, and skin wellness." },
+            { name: "Shankhauli (Canscora decussata)",      img: "images/Shankhauli.jpg",     desc: "Shankhauli supports digestion, body strength, and overall wellness." }
         ],
         quantities: [{ label: "30ML", price: "₹32" }, { label: "60ML", price: "₹45" }]
     },
@@ -434,15 +434,15 @@ const products = [
         icon: "fas fa-leaf",
         images: ["images/Gas Q1.PNG.png","images/Gas Q2.PNG.png","images/Gas Q3.PNG.png","images/Gas Q4.PNG.png"],
         ingredients: [
-            { name: "Saunf Big",      img: "images/Saunf Big.jpg",      desc: "Saunf (Fennel) improves digestion, reduces bloating, and freshens breath." },
-            { name: "Jeera Black",    img: "images/Jeera Black Seed.jpg",desc: "Black Jeera supports healthy digestion and reduces gas." },
-            { name: "Podina Leaf",    img: "images/Podina Leaf.jpg",     desc: "Podina (Mint) supports digestion and relieves nausea." },
-            { name: "Dhania Seed",    img: "images/Dhania Seed.jpg",     desc: "Dhania seeds support healthy digestion and reduce acidity." },
-            { name: "Harad Small",    img: "images/Harad Small Fruit.jpg",desc: "Harad Small Fruit supports digestion, gut health, and detoxification." },
-            { name: "Makoy Fruit",    img: "images/Makoy Fruit.jpg",     desc: "Makoy fruit supports liver function and natural detoxification." },
-            { name: "Baheda Fruit",   img: "images/Baheda Fruit.jpg",    desc: "Baheda fruit supports digestion, respiratory health, and immunity." },
-            { name: "Ajmoda Seed",    img: "images/Ajmoda Seed.jpg",     desc: "Ajmoda seeds support digestion and reduce bloating." },
-            { name: "Guduch Root",    img: "images/Guduch Root.jpg",     desc: "Guduch (Giloy) supports immunity, energy, and overall health." }
+            { name: "Saunf Big (Foeniculum vulgare)",         img: "images/Saunf Big.jpg",       desc: "Saunf (Fennel) improves digestion, reduces bloating, and freshens breath." },
+            { name: "Jeera Black (Nigella sativa)",           img: "images/Jeera Black Seed.jpg", desc: "Black Jeera supports healthy digestion and reduces gas." },
+            { name: "Podina Leaf (Mentha spicata)",           img: "images/Podina Leaf.jpg",      desc: "Podina (Mint) supports digestion and relieves nausea." },
+            { name: "Dhania Seed (Coriandrum sativum)",       img: "images/Dhania Seed.jpg",      desc: "Dhania seeds support healthy digestion and reduce acidity." },
+            { name: "Harad Small (Terminalia chebula)",       img: "images/Harad Small Fruit.jpg",desc: "Harad Small Fruit supports digestion, gut health, and detoxification." },
+            { name: "Makoy Fruit (Solanum nigrum)",           img: "images/Makoy Fruit.jpg",      desc: "Makoy fruit supports liver function and natural detoxification." },
+            { name: "Baheda Fruit (Terminalia bellirica)",    img: "images/Baheda Fruit.jpg",     desc: "Baheda fruit supports digestion, respiratory health, and immunity." },
+            { name: "Ajmoda Seed (Apium graveolens)",         img: "images/Ajmoda Seed.jpg",      desc: "Ajmoda seeds support digestion and reduce bloating." },
+            { name: "Guduch Root (Tinospora cordifolia)",     img: "images/Guduch Root.jpg",      desc: "Guduch (Giloy) supports immunity, energy, and overall health." }
         ],
         quantities: [{ label: "110ML", price: "₹70" }, { label: "220ML", price: "₹100" }]
     },
@@ -452,15 +452,15 @@ const products = [
         icon: "fas fa-heartbeat",
         images: ["images/Dige Q1.PNG.png","images/Dige Q2.PNG.png","images/Dige Q3.PNG.png","images/Dige Q4.PNG.png"],
         ingredients: [
-            { name: "Harad Fruit",   img: "images/Harad Fruit.jpg",   desc: "Harad (Haritaki) supports healthy digestion and natural body cleansing." },
-            { name: "Baheda Fruit",  img: "images/Baheda Fruit.jpg",  desc: "Baheda supports respiratory health, digestion, and detoxification." },
-            { name: "Amla Fruit",    img: "images/Amla Fruit.jpg",    desc: "Amla is rich in Vitamin C and antioxidants, supporting immunity." },
-            { name: "Sonth Rhizome", img: "images/Sonth Rhizome.jpg", desc: "Sonth (Dry Ginger) improves digestion and reduces bloating." },
-            { name: "Pippli Seed",   img: "images/Pippli Seed.jpg",   desc: "Pippli (Long Pepper) supports digestion and respiratory health." },
-            { name: "Methi Seed",    img: "images/Methi Seed.jpg",    desc: "Methi seeds support digestion and healthy metabolism." },
-            { name: "Jeera Seed",    img: "images/Jeera Seed.jpg",    desc: "Jeera seeds improve appetite and support digestive comfort." },
-            { name: "Ajmoda Seed",   img: "images/Ajmoda Seed.jpg",   desc: "Ajmoda seeds support digestion and reduce bloating." },
-            { name: "Guduch Root",   img: "images/Guduch Root.jpg",   desc: "Guduch (Giloy) supports immunity, digestion, and energy." }
+            { name: "Harad Fruit (Terminalia chebula)",       img: "images/Harad Fruit.jpg",    desc: "Harad (Haritaki) supports healthy digestion and natural body cleansing." },
+            { name: "Baheda Fruit (Terminalia bellirica)",    img: "images/Baheda Fruit.jpg",   desc: "Baheda supports respiratory health, digestion, and detoxification." },
+            { name: "Amla Fruit (Phyllanthus emblica)",       img: "images/Amla Fruit.jpg",     desc: "Amla is rich in Vitamin C and antioxidants, supporting immunity." },
+            { name: "Sonth Rhizome (Zingiber officinale)",    img: "images/Sonth Rhizome.jpg",  desc: "Sonth (Dry Ginger) improves digestion and reduces bloating." },
+            { name: "Pippli Seed (Piper longum)",             img: "images/Pippli Seed.jpg",    desc: "Pippli (Long Pepper) supports digestion and respiratory health." },
+            { name: "Methi Seed (Trigonella foenum-graecum)", img: "images/Methi Seed.jpg",    desc: "Methi seeds support digestion and healthy metabolism." },
+            { name: "Jeera Seed (Cuminum cyminum)",           img: "images/Jeera Seed.jpg",     desc: "Jeera seeds improve appetite and support digestive comfort." },
+            { name: "Ajmoda Seed (Apium graveolens)",         img: "images/Ajmoda Seed.jpg",    desc: "Ajmoda seeds support digestion and reduce bloating." },
+            { name: "Guduch Root (Tinospora cordifolia)",     img: "images/Guduch Root.jpg",    desc: "Guduch (Giloy) supports immunity, digestion, and energy." }
         ],
         quantities: [{ label: "110ML", price: "₹70" }, { label: "220ML", price: "₹100" }]
     },
@@ -470,15 +470,15 @@ const products = [
         icon: "fas fa-brain",
         images: ["images/Memory Q1.PNG.png","images/Memory Q2.PNG.png","images/Memory Q3.PNG.png","images/Memory Q4.PNG.png"],
         ingredients: [
-            { name: "Ashwagandha Root",   img: "images/Ashwagandha Root.jpg",  desc: "Ashwagandha root supports energy, stamina, and overall wellness." },
-            { name: "Shatawari Root",     img: "images/Shatawari Root.jpg",    desc: "Shatawari root supports nourishment, strength, and wellness." },
-            { name: "Kavach Seed",        img: "images/Kavach Seed.jpg",       desc: "Kavach seed supports strength, vitality, and nervous system health." },
-            { name: "Vidarikand Root",    img: "images/Vidarikand Root.jpg",   desc: "Vidarikand root supports energy and physical wellness." },
-            { name: "Shankhapushpi Herb", img: "images/Shankhapushpi Herb.jpg",desc: "Shankhapushpi supports memory, concentration, and mental clarity." },
-            { name: "Brahmi Booti",       img: "images/Brahmi Booti.jpg",      desc: "Brahmi supports memory, focus, and nervous system health." },
-            { name: "Amla Fruit",         img: "images/Amla Fruit.jpg",        desc: "Amla supports immunity, digestion, and overall wellness." },
-            { name: "Punarnava Root",     img: "images/Punarnava Root.jpg",    desc: "Punarnava root supports kidney and liver health." },
-            { name: "Arjuna Bark",        img: "images/Arjuna Bark.jpg",       desc: "Arjuna bark supports heart health and blood circulation." }
+            { name: "Ashwagandha Root (Withania somnifera)",     img: "images/Ashwagandha Root.jpg",   desc: "Ashwagandha root supports energy, stamina, and overall wellness." },
+            { name: "Shatawari Root (Asparagus racemosus)",      img: "images/Shatawari Root.jpg",     desc: "Shatawari root supports nourishment, strength, and wellness." },
+            { name: "Kavach Seed (Mucuna pruriens)",             img: "images/Kavach Seed.jpg",        desc: "Kavach seed supports strength, vitality, and nervous system health." },
+            { name: "Vidarikand Root (Pueraria tuberosa)",       img: "images/Vidarikand Root.jpg",    desc: "Vidarikand root supports energy and physical wellness." },
+            { name: "Shankhapushpi Herb (Convolvulus pluricaulis)", img: "images/Shankhapushpi Herb.jpg", desc: "Shankhapushpi supports memory, concentration, and mental clarity." },
+            { name: "Brahmi Booti (Bacopa monnieri)",            img: "images/Brahmi Booti.jpg",       desc: "Brahmi supports memory, focus, and nervous system health." },
+            { name: "Amla Fruit (Phyllanthus emblica)",          img: "images/Amla Fruit.jpg",         desc: "Amla supports immunity, digestion, and overall wellness." },
+            { name: "Punarnava Root (Boerhavia diffusa)",        img: "images/Punarnava Root.jpg",     desc: "Punarnava root supports kidney and liver health." },
+            { name: "Arjuna Bark (Terminalia arjuna)",           img: "images/Arjuna Bark.jpg",        desc: "Arjuna bark supports heart health and blood circulation." }
         ],
         quantities: [{ label: "220ML", price: "₹100" }]
     }

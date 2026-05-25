@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
     pointer-events: none;
 }
 .hero-content {
-    max-width: 1200px; margin: 0 auto; padding: 0 5%;
+    max-width: 1200px; margin: 0 auto; padding: 5rem 5% 3rem;
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 4rem; align-items: center; position: relative; z-index: 2;
 }
@@ -126,13 +126,13 @@ h1, h2, h3, h4, h5, h6 {
 .btn-secondary:hover { background: var(--white); color: var(--primary-teal); }
 
 /* ── Sections ── */
-.section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; }
+.section { padding: 2.5rem 5%; max-width: 1200px; margin: 0 auto; }
 .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--navy-blue); }
 
 /* ── Why Choose Us ── */
 .features-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 2rem; margin-top: 4rem; }
 .feature-card {
-    background: var(--white); padding: 2.5rem 2rem; border-radius: 20px;
+    background: var(--white); padding: 2rem 1.5rem; border-radius: 20px;
     text-align: center; box-shadow: var(--shadow);
     transition: all 0.3s ease; position: relative; overflow: hidden;
 }
@@ -144,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
 .feature-icon { width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; }
 
 /* ── Stats ── */
-.stats { background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%); padding: 4rem 5%; }
+.stats { background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%); padding: 2.5rem 5%; }
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 2rem; text-align: center; }
 .stat-item h3 { font-size: 3rem; color: var(--primary-teal); font-weight: 700; margin-bottom: 0.5rem; }
 
@@ -162,9 +162,10 @@ h1, h2, h3, h4, h5, h6 {
 /* ── CTA Banner ── */
 .cta-banner {
     background: linear-gradient(135deg, var(--primary-teal), var(--primary-teal-dark));
-    text-align: center; color: var(--white); padding: 4rem 5%;
+    text-align: center; color: var(--white); padding: 3rem 5%;
 }
 .cta-banner h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+.cta-banner .btn { margin-top: 1.5rem; }
 
 /* ── Products ── */
 .products-header { text-align: center; padding: 4rem 5%; background: var(--light-gray); }
@@ -343,7 +344,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .ingredient-item p { font-size: 0.95rem; color: var(--navy-blue); font-weight: 600; margin: 0; }
 .ingredient-item p strong { font-weight: 800; }
-.ingredient-desc { font-size: 0.8rem; color: var(--gray); margin-top: 0.2rem; line-height: 1.4; }
+.ingredient-item .ingredient-desc { font-size: 0.8rem; color: var(--gray); margin-top: 0.2rem; line-height: 1.4; font-weight: 400; }
 
 /* ── Scroll Animations ── */
 .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
