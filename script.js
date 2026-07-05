@@ -187,7 +187,7 @@ const products = [
     },
     {
         name: "Femina", price: "₹70",
-        desc: "Boosts immunity and overall health. Our Femina capsules contain 500mg of ascorbic acid with added bioflavonoids for enhanced absorption. This powerful antioxidant supports immune system function, collagen synthesis, and protects cells from oxidative stress. Ideal for daily wellness and immune defense.",
+        desc: "A proprietary Ayurvedic medicine for women’s health, Femina Capsules are formulated to support menstrual wellness and help in conditions related to irregular, painful, scanty, or delayed menstrual cycles. Enriched with trusted Ayurvedic herbs, it acts as a uterine stimulant and tonic for women’s care.",
         icon: "fas fa-capsules",
         images: ["images/Femina1.PNG.png","images/Femina2.PNG.png"],
         ingredients: [
@@ -304,7 +304,7 @@ const products = [
     },
     {
         name: "M.C Plus", price: "₹90",
-        desc: "M.C Plus is a specialized Ayurvedic proprietary medicine formulated to support women's reproductive wellness. Designed for menstrual irregularities, these capsules leverage a traditional blend of botanical extracts to help regulate and restore a healthy monthly cycle.",
+        desc: "M.C Plus is a specialized Ayurvedic proprietary medicine formulated to support women's menstrual disorders. Designed for menstrual irregularities, these capsules leverage a traditional blend of botanical extracts to help regulate and restore a healthy monthly cycle.",
         icon: "fas fa-female",
         images: ["images/M.C Plus syrup1.PNG.png","images/M.C Plus syrup2.PNG.png","images/M.C Plus syrup3.PNG.png","images/M.C Plus syrup4.PNG.png"],
         ingredients: [
