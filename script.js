@@ -342,23 +342,43 @@ const products = [
         ],
         quantities: [{ label: "50ML", price: "₹70" }, { label: "100ML", price: "₹110" }]
     },
+{
+    name: "Quality Gripe Water",
+    price: "₹60",
+    desc: "Quality Gripe Water is a proprietary Ayurvedic medicine formulated for infants and young children to support relief from indigestion, acidity, griping, flatulence, and digestive discomfort associated with teething. Its traditional herbal formulation helps promote comfortable digestion, regular bowel movement, and healthy growth when used as directed.",
+    icon: "fas fa-baby",
+    images: [
+        "images/gripewater1.png",
+        "images/gripewater2.png",
+        "images/gripewater3.png",
+        "images/gripewater4.png"
+    ],
+  ingredients: [
     {
-        name: "Quality Gripe Water", price: "₹60",
-        desc: "Quality Gripe Water is a trusted Ayurvedic formulation designed to provide gentle relief for babies from common digestive discomforts including colic, gas, and indigestion. Made with time-tested herbal ingredients, it supports healthy digestion and comfort in infants.",
-        icon: "fas fa-baby",
-        images: [],
-        ingredients: [
-            { name: "Bhringraj Plant (Eclipta alba)",          img: "images/Bhringraj plant.PNG.jpg",    desc: "Bhringraj supports liver health and overall wellness." },
-            { name: "Arjun Bark (Terminalia arjuna)",          img: "images/Arjun Bark.PNG.jpg",         desc: "Arjuna bark supports heart health and blood circulation." },
-            { name: "Makoi Fruit (Solanum nigrum)",            img: "images/Makoi fruit.PNG",            desc: "Makoi supports liver function and improves digestion." },
-            { name: "Tulsi Leaf (Ocimum sanctum)",             img: "images/Tulsi leaf.PNG",             desc: "Tulsi boosts immunity and supports respiratory health." },
-            { name: "Pittapapda Plant (Fumaria officinalis)",  img: "images/Pittapapda plant.PNG",       desc: "Pittapapda supports liver health, skin wellness, and body cooling." },
-            { name: "Sarpunkha Panchang (Tephrosia purpurea)",img: "images/Sarpunkha Panchang.PNG.PNG", desc: "Sarpunkha supports liver and spleen health and body detoxification." },
-            { name: "Vidanga Seed (Embelia ribes)",            img: "images/Vidanga seed.PNG",           desc: "Vidanga seeds support gut health and natural body cleansing." },
-            { name: "Ghritkumari Sap (Aloe barbadensis)",     img: "images/Ghritkumari sap.PNG",        desc: "Aloe Vera sap supports liver health, digestion, and hydration." }
-        ],
-        quantities: [{ label: "100ML", price: "₹60" }]
+        name: "Kauni",
+        img: "images/kauni.jpg",
+        desc: "Kauni is traditionally used in digestive formulations to help support digestion and ease gas, griping, and abdominal discomfort."
     },
+    {
+        name: "Saunf (Foeniculum vulgare)",
+        img: "images/Saunf.jpg",
+        desc: "Saunf, or fennel, is traditionally used to support digestion and help reduce gas, bloating, and digestive discomfort."
+    },
+    {
+        name: "Pudina (Mentha)",
+        img: "images/Podina Leaf.jpg",
+        desc: "Pudina, or mint, provides a cooling and soothing effect and is traditionally used to support comfortable digestion."
+    },
+    {
+        name: "Saphura / Sharpunkha (Tephrosia purpurea)",
+        img: "images/saphura.jpg",
+        desc: "Sharpunkha is an Ayurvedic herb traditionally used to support digestion, liver function, and overall gastrointestinal wellness."
+    }
+],
+    quantities: [
+        { label: "100ML", price: "₹60" }
+    ]
+},
     {
         name: "DADOL Skin Ointment", price: "₹60",
         desc: "This Ayurvedic skin ointment is a specialized herbal formula enriched with Neem to effectively treat various fungal and inflammatory skin conditions. It is specifically indicated for the relief of ringworm, scabies, eczema, and itchy skin.",
