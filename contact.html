@@ -28,12 +28,13 @@
     <!-- Navigation -->
     <nav class="navbar scrolled" id="navbar">
         <a href="index.html" style="text-decoration:none;">
-            <div class="logo"><img src="images/logo.png" alt="Quality Pharmaceuticals"></div>
+            <div class="logo"><img src="images/optimized/logo.png.webp" alt="Quality Pharmaceuticals" decoding="async"></div>
         </a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#products">Products</a></li>
             <li><a href="about.html">About</a></li>
+            <li><a href="Quality-Pharmaceuticals-Brochure.pdf" download><i class="fas fa-download"></i> Download Brochure</a></li>
             <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
         <div class="mobile-menu"><span></span><span></span><span></span></div>
@@ -49,17 +50,19 @@
     <section id="contact" class="section">
         <div class="contact-content" data-aos="fade-up">
             <form class="contact-form">
+                <h2>Product & Business Enquiries</h2>
+                <p class="form-intro">Tell us what you need and our team will respond during business hours.</p>
                 <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
+                    <input type="text" name="name" autocomplete="name" placeholder="Your Name" aria-label="Your name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" placeholder="Your Email" required>
+                    <input type="email" name="email" autocomplete="email" placeholder="Your Email" aria-label="Your email" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" placeholder="Your Phone">
+                    <input type="tel" name="phone" autocomplete="tel" placeholder="Your Phone" aria-label="Your phone">
                 </div>
                 <div class="form-group">
-                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <textarea name="message" rows="5" placeholder="Your Message" aria-label="Your message" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width:100%;">
                     <i class="fas fa-paper-plane"></i> Send Message
@@ -77,7 +80,7 @@
                     <div class="contact-icon"><i class="fas fa-phone"></i></div>
                     <div>
                         <h4>Call Us</h4>
-                        <p>9935430450<br>7355361236</p>
+                        <p><a href="tel:+917355361236">+91 73553 61236</a><br><a href="tel:+919935430450">+91 99354 30450</a></p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -96,6 +99,13 @@
                         <p>Monday – Saturday<br>9:00 AM – 7:00 PM</p>
                     </div>
                 </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-file-shield"></i></div>
+                    <div>
+                        <h4>Licences &amp; Registration</h4>
+                        <p>Mfg. Licence: A-73/1977/2018<br>GSTIN: 09AAAFQ7540F1Z9</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -106,11 +116,10 @@
             <div class="footer-section">
                 <h3>Quality Pharmaceuticals</h3>
                 <p>Trusted pharmaceutical solutions for better healthcare. Committed to quality, safety, and innovation.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                <div class="footer-credentials">
+                    <span><i class="fas fa-certificate"></i> GMP Certified</span>
+                    <span><i class="fas fa-file-shield"></i> Mfg. Licence: A-73/1977/2018</span>
+                    <span><i class="fas fa-receipt"></i> GSTIN: 09AAAFQ7540F1Z9</span>
                 </div>
             </div>
             <div class="footer-section">
@@ -122,22 +131,24 @@
             </div>
             <div class="footer-section">
                 <h3>Products</h3>
-                <a href="index.html#products">Pain Relief</a>
-                <a href="index.html#products">Women's Wellness</a>
-                <a href="index.html#products">Baby Care</a>
-                <a href="index.html#products">Digestive Health</a>
-                <a href="index.html#products">Liver & Immunity</a>
+                <a href="index.html?category=Pain%20%26%20Joint#products">Pain &amp; Joint</a>
+                <a href="index.html?category=Women%27s%20Wellness#products">Women's Wellness</a>
+                <a href="index.html?category=Baby%20%26%20Family#products">Baby &amp; Family</a>
+                <a href="index.html?category=Digestive%20Health#products">Digestive Health</a>
+                <a href="index.html?category=Liver%20%26%20Tonics#products">Liver &amp; Tonics</a>
             </div>
             <div class="footer-section">
-                <h3>Support</h3>
-                <a href="contact.html">Customer Service</a>
-                <a href="contact.html">FAQ</a>
-                <a href="contact.html">Shipping Info</a>
-                <a href="contact.html">Returns</a>
+                <h3>Enquiries</h3>
+                <a href="contact.html">Product Enquiry</a>
+                <a href="contact.html">Distribution & Business</a>
+                <a href="Quality-Pharmaceuticals-Brochure.pdf" download>Download Brochure</a>
+                <a href="tel:+917355361236">Call +91 73553 61236</a>
+                <a href="tel:+919935430450">Alternate: +91 99354 30450</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Quality Pharmaceuticals. All rights reserved. | Designed for Healthcare Excellence</p>
+            <p>&copy; 2026 Quality Pharmaceuticals. All rights reserved.</p>
+            <p class="footer-legal">Ayurvedic product information is for general awareness and is not a substitute for professional medical advice. Use as directed on the label or by a qualified healthcare professional.</p>
         </div>
     </footer>
 
