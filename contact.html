@@ -9,45 +9,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .page-hero {
-            padding: 8rem 5% 4rem;
-            background: linear-gradient(135deg, var(--primary-teal), var(--primary-teal-dark));
-            text-align: center;
-            color: var(--white);
-        }
-        .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem; }
-        .page-hero p  { font-size: 1.1rem; opacity: 0.9; }
-    </style>
+    <meta name="theme-color" content="#17384A">
 </head>
 <body>
 
     <!-- Loading Screen -->
-    <div class="loading" id="loading"><div class="loader"></div></div>
+    <div class="loading" id="loading" aria-hidden="true"><div class="loader"></div></div>
 
     <!-- Navigation -->
     <nav class="navbar scrolled" id="navbar">
-        <a href="index.html" style="text-decoration:none;">
-            <div class="logo"><img src="images/optimized/logo.png.webp" alt="Quality Pharmaceuticals" decoding="async"></div>
+        <a href="index.html" class="brand-lockup" aria-label="Quality Pharmaceuticals home">
+            <div class="logo"><img src="images/optimized/logo-brand.webp" alt="Quality Pharmaceuticals official logo" decoding="async"></div>
+            <span class="brand-name"><strong>Quality</strong><small>Pharmaceuticals</small></span>
         </a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#products">Products</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="Quality-Pharmaceuticals-Brochure.pdf" download><i class="fas fa-download"></i> Download Brochure</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="Quality-Pharmaceuticals-Brochure.pdf" download>Brochure</a></li>
+            <li><a href="contact.html" class="active nav-contact">Contact</a></li>
         </ul>
-        <div class="mobile-menu"><span></span><span></span><span></span></div>
+        <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
     </nav>
 
     <!-- Page Hero -->
     <section class="page-hero">
-        <h1>Get In Touch</h1>
-        <p>We're here to help with all your pharmaceutical needs</p>
+        <p class="page-eyebrow">Enquiries &amp; support</p>
+        <h1>Let us help you get started.</h1>
+        <p>Reach our team for product availability, orders, or distribution opportunities.</p>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section contact-section">
+        <div class="section-heading contact-heading" data-aos="fade-up">
+            <p class="eyebrow">Direct and responsive</p>
+            <h2 class="section-title">How can we help?</h2>
+            <p>Share your requirement and our team will respond during business hours.</p>
+        </div>
         <div class="contact-content" data-aos="fade-up">
             <form class="contact-form">
                 <h2>Product & Business Enquiries</h2>
@@ -117,7 +115,7 @@
                 <h3>Quality Pharmaceuticals</h3>
                 <p>Trusted pharmaceutical solutions for better healthcare. Committed to quality, safety, and innovation.</p>
                 <div class="footer-credentials">
-                    <span><i class="fas fa-certificate"></i> GMP Certified</span>
+                    <span><i class="fas fa-shield-heart"></i> GMP Certified</span>
                     <span><i class="fas fa-file-shield"></i> Mfg. Licence: A-73/1977/2018</span>
                     <span><i class="fas fa-receipt"></i> GSTIN: 09AAAFQ7540F1Z9</span>
                 </div>
@@ -148,7 +146,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Quality Pharmaceuticals. All rights reserved.</p>
-            <p class="footer-legal">Ayurvedic product information is for general awareness and is not a substitute for professional medical advice. Use as directed on the label or by a qualified healthcare professional.</p>
+            <p class="footer-legal">Our licensed, GMP-certified Ayurvedic products combine time-tested Ayurvedic knowledge with quality-controlled manufacturing and carefully selected ingredients. Use as directed on the label or by a qualified healthcare professional.</p>
         </div>
     </footer>
 

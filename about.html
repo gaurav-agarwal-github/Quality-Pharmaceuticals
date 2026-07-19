@@ -9,53 +9,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Page-specific hero for inner pages */
-        .page-hero {
-            padding: 8rem 5% 4rem;
-            background: linear-gradient(135deg, var(--primary-teal), var(--primary-teal-dark));
-            text-align: center;
-            color: var(--white);
-        }
-        .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem; }
-        .page-hero p  { font-size: 1.1rem; opacity: 0.9; }
-        .about-content p { margin-bottom: 1rem; color: var(--navy-light); }
-        .about-content h3 { margin-bottom: 1rem; color: var(--navy-blue); font-size: 1.5rem; }
-    </style>
+    <meta name="theme-color" content="#17384A">
 </head>
 <body>
 
     <!-- Loading Screen -->
-    <div class="loading" id="loading"><div class="loader"></div></div>
+    <div class="loading" id="loading" aria-hidden="true"><div class="loader"></div></div>
 
     <!-- Navigation -->
     <nav class="navbar scrolled" id="navbar">
-        <a href="index.html" style="text-decoration:none;">
-            <div class="logo"><img src="images/optimized/logo.png.webp" alt="Quality Pharmaceuticals" decoding="async"></div>
+        <a href="index.html" class="brand-lockup" aria-label="Quality Pharmaceuticals home">
+            <div class="logo"><img src="images/optimized/logo-brand.webp" alt="Quality Pharmaceuticals official logo" decoding="async"></div>
+            <span class="brand-name"><strong>Quality</strong><small>Pharmaceuticals</small></span>
         </a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#products">Products</a></li>
             <li><a href="about.html" class="active">About</a></li>
-            <li><a href="Quality-Pharmaceuticals-Brochure.pdf" download><i class="fas fa-download"></i> Download Brochure</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Quality-Pharmaceuticals-Brochure.pdf" download>Brochure</a></li>
+            <li><a href="contact.html" class="nav-contact">Contact</a></li>
         </ul>
-        <div class="mobile-menu"><span></span><span></span><span></span></div>
+        <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
     </nav>
 
     <!-- Page Hero -->
     <section class="page-hero">
-        <h1>About Quality Pharmaceuticals</h1>
-        <p>Trusted healthcare excellence since 1967</p>
+        <p class="page-eyebrow">Our company</p>
+        <h1>Rooted in trust since 1967.</h1>
+        <p>Decades of Ayurvedic formulation experience, responsible manufacturing, and dependable partnership.</p>
     </section>
 
     <!-- About Content -->
     <section id="about" class="section">
         <div class="about-content" data-aos="fade-up">
             <div>
-                <h3>Our Commitment to Healthcare Excellence</h3>
-                <p>Quality Pharmaceuticals has been a trusted name in pharmaceutical manufacturing since 1967. We specialize in producing high-quality Ayurvedic medicines with a focus on consistency, safety, and responsible manufacturing.</p>
-                <p>Our mission is to provide safe, effective, and affordable healthcare solutions while maintaining the highest standards of quality assurance and customer safety.</p>
+                <p class="eyebrow">Our story</p>
+                <h3>A legacy of consistent Ayurvedic care</h3>
+                <p class="about-lead">Quality Pharmaceuticals has served families and healthcare partners since 1967 with an expanding range of Ayurvedic medicines.</p>
+                <p>Our work is guided by responsible manufacturing, dependable quality, accessible pricing, and long-term relationships with the people who recommend and distribute our products.</p>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-icon"><i class="fas fa-calendar"></i></div>
@@ -94,22 +85,86 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <img src="images/optimized/qp_about_vertical.jpg.webp" loading="lazy" decoding="async"
-                    alt="Quality Pharmaceuticals" style="width:100%;border-radius:20px;box-shadow:var(--shadow-lg);">
+            <div class="about-image-frame">
+                <img src="images/optimized/qp_about_vertical.jpg.webp" loading="lazy" decoding="async" alt="Quality Pharmaceuticals heritage and product portfolio">
+                <div class="about-image-caption"><strong>Quality Pharmaceuticals</strong><span>Ayurvedic healthcare · Since 1967</span></div>
             </div>
         </div>
     </section>
 
+    <section class="partner-trust section">
+        <div class="section-heading" data-aos="fade-up">
+            <p class="eyebrow">Built for long-term relationships</p>
+            <h2 class="section-title">Why partners trust us</h2>
+            <p>Clear communication, dependable products, and a heritage of serving healthcare businesses.</p>
+        </div>
+        <div class="partner-trust-grid">
+            <article class="partner-trust-card" data-aos="fade-up"><i class="fas fa-boxes-stacked"></i><h3>Dependable Portfolio</h3><p>A focused range across everyday Ayurvedic healthcare needs.</p></article>
+            <article class="partner-trust-card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-handshake"></i><h3>Responsive Partnership</h3><p>Direct support for product, availability, and distribution enquiries.</p></article>
+            <article class="partner-trust-card" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-shield-heart"></i><h3>Visible Credentials</h3><p>GMP, manufacturing licence, and GST details presented clearly.</p></article>
+        </div>
+    </section>
+
+    <section id="facility" class="facility-gallery-section section" aria-labelledby="facilityTitle">
+        <div class="facility-gallery-heading" data-aos="fade-up">
+            <div>
+                <p class="eyebrow">Our premises &amp; processes</p>
+                <h2 id="facilityTitle" class="section-title">Inside Quality Pharmaceuticals</h2>
+            </div>
+            <p>Authentic views of our manufacturing premises, quality-control work, preparation, filling, and packing operations.</p>
+        </div>
+        <div class="facility-gallery">
+            <figure class="facility-gallery-card facility-gallery-featured" data-aos="fade-up">
+                <img src="images/facility/optimized/home-exterior-day-w-qp.webp" alt="Daytime exterior of Quality Pharmaceuticals" loading="lazy" decoding="async">
+                <figcaption><strong>Quality Pharmaceuticals</strong><span>Our manufacturing premises</span></figcaption>
+            </figure>
+            <figure class="facility-gallery-card facility-gallery-landscape" data-aos="fade-up" data-aos-delay="80">
+                <img src="images/facility/optimized/quality-control.webp" alt="Quality control work inside Quality Pharmaceuticals" loading="lazy" decoding="async">
+                <figcaption><strong>Quality control</strong><span>Checks supporting consistency and care</span></figcaption>
+            </figure>
+            <figure class="facility-gallery-card facility-gallery-portrait" data-aos="fade-up">
+                <img src="images/facility/optimized/bottle-filling.webp" alt="Bottle filling operation at Quality Pharmaceuticals" loading="lazy" decoding="async">
+                <figcaption><strong>Liquid filling</strong><span>Measured production processes</span></figcaption>
+            </figure>
+            <figure class="facility-gallery-card facility-gallery-portrait" data-aos="fade-up" data-aos-delay="60">
+                <img src="images/facility/optimized/capsule-fillling.webp" alt="Capsule filling operation at Quality Pharmaceuticals" loading="lazy" decoding="async">
+                <figcaption><strong>Capsule filling</strong><span>Careful handling during production</span></figcaption>
+            </figure>
+            <figure class="facility-gallery-card facility-gallery-portrait" data-aos="fade-up" data-aos-delay="120">
+                <img src="images/facility/optimized/seal-machine.webp" alt="Sealing equipment at Quality Pharmaceuticals" loading="lazy" decoding="async">
+                <figcaption><strong>Sealing &amp; finishing</strong><span>Preparing products for packing</span></figcaption>
+            </figure>
+            <figure class="facility-gallery-card facility-gallery-portrait" data-aos="fade-up">
+                <img src="images/facility/optimized/oil-section.webp" alt="Oil section at Quality Pharmaceuticals" loading="lazy" decoding="async">
+                <figcaption><strong>Oil section</strong><span>Dedicated preparation area</span></figcaption>
+            </figure>
+            <figure class="facility-gallery-card facility-gallery-portrait facility-gallery-compact" data-aos="fade-up" data-aos-delay="60">
+                <img src="images/facility/optimized/boiling-room.webp" alt="Boiling room at Quality Pharmaceuticals" loading="lazy" decoding="async">
+                <figcaption><strong>Preparation room</strong><span>Traditional processes with production oversight</span></figcaption>
+            </figure>
+            <figure class="facility-gallery-card facility-gallery-portrait facility-gallery-compact" data-aos="fade-up" data-aos-delay="120">
+                <img src="images/facility/optimized/drums-storage.webp" alt="Covered material drums at Quality Pharmaceuticals" loading="lazy" decoding="async">
+                <figcaption><strong>Material handling</strong><span>Organised storage within the facility</span></figcaption>
+            </figure>
+            <figure class="facility-gallery-card facility-gallery-portrait" data-aos="fade-up">
+                <img src="images/facility/optimized/packing.webp" alt="Product packing work at Quality Pharmaceuticals" loading="lazy" decoding="async">
+                <figcaption><strong>Product packing</strong><span>Final preparation before distribution</span></figcaption>
+            </figure>
+            <figure class="facility-gallery-card facility-gallery-night" data-aos="fade-up" data-aos-delay="80">
+                <img src="images/facility/optimized/home-exterior-night-w-qp.webp" alt="Quality Pharmaceuticals premises illuminated at night" loading="lazy" decoding="async">
+                <figcaption><strong>Established presence</strong><span>Quality Pharmaceuticals · Since 1967</span></figcaption>
+            </figure>
+        </div>
+    </section>
     <section class="compliance-section section" aria-labelledby="complianceTitle">
         <div class="compliance-heading" data-aos="fade-up">
             <p class="eyebrow">Verified credentials</p>
             <h2 id="complianceTitle">Quality, Heritage & Compliance</h2>
-            <p>Clear company credentials help healthcare partners and customers verify who stands behind every Quality Pharmaceuticals product.</p>
+            <p>Essential company and manufacturing details, presented clearly for customers and partners.</p>
         </div>
         <div class="compliance-grid">
-            <article class="compliance-card" data-aos="fade-up"><i class="fas fa-file-shield"></i><h3>Licences &amp; Registration</h3><strong>Mfg. Licence: A-73/1977/2018</strong><strong>GSTIN: 09AAAFQ7540F1Z9</strong><p>Verified company compliance details.</p></article>
-            <article class="compliance-card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-certificate"></i><h3>GMP Certified</h3><strong>Quality-controlled production</strong><p>Manufacturing practices focused on consistency, hygiene, and product quality.</p></article>
+            <article class="compliance-card" data-aos="fade-up"><i class="fas fa-file-shield"></i><h3>Licences &amp; Registration</h3><strong>Mfg. Licence: A-73/1977/2018</strong><strong>GSTIN: 09AAAFQ7540F1Z9</strong><p>Registration details for straightforward verification.</p></article>
+            <article class="compliance-card" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-certificate"></i><h3>GMP Certified</h3><strong>Quality-controlled production</strong><p>Production practices focused on hygiene, consistency, and quality.</p></article>
             <article class="compliance-card" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-building-shield"></i><h3>Established Heritage</h3><strong>Serving since 1967</strong><p>Decades of experience in Ayurvedic healthcare products.</p></article>
             <article class="compliance-card" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-file-pdf"></i><h3>Company Brochure</h3><strong>Product and company profile</strong><a href="Quality-Pharmaceuticals-Brochure.pdf" download>Download verified brochure <i class="fas fa-download"></i></a></article>
         </div>
@@ -121,7 +176,7 @@
                 <h3>Quality Pharmaceuticals</h3>
                 <p>Trusted pharmaceutical solutions for better healthcare since 1967. Committed to quality, safety, and innovation.</p>
                 <div class="footer-credentials">
-                    <span><i class="fas fa-certificate"></i> GMP Certified</span>
+                    <span><i class="fas fa-shield-heart"></i> GMP Certified</span>
                     <span><i class="fas fa-file-shield"></i> Mfg. Licence: A-73/1977/2018</span>
                     <span><i class="fas fa-receipt"></i> GSTIN: 09AAAFQ7540F1Z9</span>
                 </div>
@@ -152,7 +207,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Quality Pharmaceuticals. All rights reserved.</p>
-            <p class="footer-legal">Ayurvedic product information is for general awareness and is not a substitute for professional medical advice. Use as directed on the label or by a qualified healthcare professional.</p>
+            <p class="footer-legal">Our licensed, GMP-certified Ayurvedic products combine time-tested Ayurvedic knowledge with quality-controlled manufacturing and carefully selected ingredients. Use as directed on the label or by a qualified healthcare professional.</p>
         </div>
     </footer>
 

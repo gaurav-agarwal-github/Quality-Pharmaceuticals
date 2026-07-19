@@ -19,7 +19,16 @@ window.addEventListener('scroll', () => {
 const mobileMenu = document.querySelector('.mobile-menu');
 const navLinks   = document.querySelector('.nav-links');
 if (mobileMenu && navLinks) {
-    mobileMenu.addEventListener('click', () => navLinks.classList.toggle('open'));
+    mobileMenu.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        mobileMenu.classList.toggle('open', isOpen);
+        mobileMenu.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        mobileMenu.setAttribute('aria-expanded', 'false');
+    }));
 }
 
 // ── Smooth Scrolling ─────────────────────────────────────────
@@ -36,39 +45,38 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ── AOS Initialization ───────────────────────────────────────
 if (typeof AOS !== 'undefined') {
-    AOS.init({ duration: 800, once: true, offset: 100 });
+    AOS.init({ duration: 600, once: true, offset: 60, easing: 'ease-out' });
 }
 
 // ── Stats Counter Animation ──────────────────────────────────
 function animateCounters() {
     document.querySelectorAll('[data-target]').forEach(counter => {
-        const target    = parseInt(counter.getAttribute('data-target'));
-        const increment = target / 100;
-        let current     = 0;
-        const suffix    = target > 100 ? '+' : '';
-
-        const update = () => {
-            if (current < target) {
-                current += increment;
-                counter.textContent = Math.floor(current) + suffix;
-                requestAnimationFrame(update);
-            } else {
-                counter.textContent = target + suffix;
-            }
+        const target = parseInt(counter.getAttribute('data-target'), 10);
+        const duration = 1500;
+        const startedAt = performance.now();
+        const update = now => {
+            const progress = Math.min((now - startedAt) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            counter.textContent = Math.floor(target * eased).toLocaleString('en-IN');
+            if (progress < 1) requestAnimationFrame(update);
         };
-        update();
+        requestAnimationFrame(update);
     });
 }
 
 // ── Fade-in + Stats Observer ─────────────────────────────────
+let countersAnimated = false;
 const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            if (entry.target.querySelector('[data-target]')) animateCounters();
+            if (!countersAnimated && entry.target.querySelector('[data-target]')) {
+                countersAnimated = true;
+                animateCounters();
+            }
         }
     });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
@@ -76,17 +84,13 @@ document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 const productObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
-            setTimeout(() => entry.target.classList.add('visible'), i * 100);
+            setTimeout(() => entry.target.classList.add('visible'), i * 70);
+            productObserver.unobserve(entry.target);
         }
     });
 });
 document.querySelectorAll('.product-card').forEach(card => productObserver.observe(card));
 
-// ── Parallax on floating icons ───────────────────────────────
-window.addEventListener('scroll', () => {
-    const icons = document.querySelector('.floating-icons');
-    if (icons) icons.style.transform = `translateY(${window.pageYOffset * 0.5}px)`;
-});
 
 // ── Testimonial auto-slider ───────────────────────────────────
 (function () {
@@ -703,13 +707,17 @@ if (productModal) {
     }
 
     let modalHistoryPushed = false;
+    let lastFocusedElement = null;
 
     function openProductModal(product) {
         document.getElementById('modalProductName').textContent = product.name;
+        document.getElementById('modalProductMeta').textContent = `Quality Pharmaceuticals · ${product.category}`;
         document.getElementById('modalProductDesc').textContent = product.desc;
         document.getElementById('modalSuitableFor').textContent = product.suitableFor;
         document.getElementById('modalDose').textContent = product.dose;
-        document.getElementById('modalEnquiryButton').href = 'contact.html?product=' + encodeURIComponent(product.name);
+        const enquiryUrl = 'contact.html?product=' + encodeURIComponent(product.name);
+        document.getElementById('modalEnquiryButton').href = enquiryUrl;
+        document.getElementById('mobileModalEnquiryButton').href = enquiryUrl;
         renderDetailList('modalIndications', product.indications);
         renderDetailList('modalResults', product.results);
 
@@ -765,8 +773,13 @@ if (productModal) {
             grid.appendChild(container);
         }
 
+        lastFocusedElement = document.activeElement;
         productModal.classList.add('active');
         document.body.style.overflow = 'hidden';
+        const modalContent = productModal.querySelector('.modal-content');
+        modalContent.scrollTop = 0;
+        productModal.querySelectorAll('.modal-section-nav a').forEach((link, index) => link.classList.toggle('active', index === 0));
+        setTimeout(() => modalClose.focus(), 50);
 
         // Push history state so browser back button closes the modal
         history.pushState({ modal: true }, '');
@@ -777,6 +790,7 @@ if (productModal) {
         if (!productModal.classList.contains('active')) return;
         productModal.classList.remove('active');
         document.body.style.overflow = 'auto';
+        if (lastFocusedElement) lastFocusedElement.focus();
         if (!skipHistory && modalHistoryPushed) {
             modalHistoryPushed = false;
             history.back();
@@ -795,6 +809,12 @@ if (productModal) {
     if (modalClose) modalClose.addEventListener('click', () => closeProductModal(false));
     productModal.addEventListener('click', e => { if (e.target === productModal) closeProductModal(false); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProductModal(false); });
+    productModal.querySelectorAll('.modal-section-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            productModal.querySelectorAll('.modal-section-nav a').forEach(item => item.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
 
     // Product discovery and cards
     const grid = document.getElementById('productsGrid');
@@ -817,20 +837,24 @@ if (productModal) {
 
         function createProductCard(product) {
             const card = document.createElement('article');
-            card.className = 'product-card fade-in';
+            card.className = 'product-card';
             card.tabIndex = 0;
             card.setAttribute('role', 'button');
             card.setAttribute('aria-label', `View ${product.name} details`);
             const imgSrc = product.images && product.images.length ? product.images[0] : '';
+            const hasMultiplePacks = product.quantities && product.quantities.length > 1;
             card.innerHTML = `
-                <div class="product-image" style="background:linear-gradient(135deg,var(--light-gray),var(--white));">
-                    ${imgSrc ? `<img src="${imgSrc}" alt="${product.name}" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:contain;padding:1rem;">` : `<i class="${product.icon}" style="font-size:3rem;color:var(--primary-teal);"></i>`}
+                <div class="product-image">
+                    ${imgSrc ? `<img src="${imgSrc}" alt="${product.name}" loading="lazy" decoding="async">` : `<i class="${product.icon}"></i>`}
                 </div>
                 <div class="product-info">
                     <span class="product-category">${product.category}</span>
-                    <div class="product-price">${product.price}</div>
                     <h4>${product.name}</h4>
-                    <p>${product.desc.substring(0, 72)}...</p>
+                    <p class="product-description">${product.desc}</p>
+                    <div class="product-card-footer">
+                        <div><span class="product-price-label">${hasMultiplePacks ? 'MRP from' : 'MRP'}</span><div class="product-price">${product.price}</div></div>
+                        <span class="view-details-cue">View details <i class="fas fa-arrow-right"></i></span>
+                    </div>
                 </div>
             `;
             const openCard = () => openProductModal(product);
@@ -860,19 +884,47 @@ if (productModal) {
         }
 
         if (filtersContainer) {
-            categories.forEach(category => {
+            const priorityOrder = ['All', 'Digestive Health', 'Baby & Family', "Women's Wellness", 'Pain & Joint'];
+            const primaryCategories = priorityOrder.filter(category => categories.includes(category));
+            const secondaryCategories = categories.filter(category => !primaryCategories.includes(category));
+            let filtersExpanded = secondaryCategories.includes(activeCategory);
+
+            function selectCategory(category) {
+                activeCategory = category;
+                if (secondaryCategories.includes(category)) filtersExpanded = true;
+                renderFilterButtons();
+                renderProducts();
+            }
+
+            function createFilterButton(category) {
                 const button = document.createElement('button');
                 button.type = 'button';
                 button.className = 'product-filter' + (category === activeCategory ? ' active' : '');
                 button.textContent = category;
-                button.addEventListener('click', () => {
-                    activeCategory = category;
-                    filtersContainer.querySelectorAll('.product-filter').forEach(item => item.classList.remove('active'));
-                    button.classList.add('active');
-                    renderProducts();
-                });
-                filtersContainer.appendChild(button);
-            });
+                button.setAttribute('aria-pressed', String(category === activeCategory));
+                button.addEventListener('click', () => selectCategory(category));
+                return button;
+            }
+
+            function renderFilterButtons() {
+                filtersContainer.innerHTML = '';
+                primaryCategories.forEach(category => filtersContainer.appendChild(createFilterButton(category)));
+                if (filtersExpanded) secondaryCategories.forEach(category => filtersContainer.appendChild(createFilterButton(category)));
+                if (secondaryCategories.length) {
+                    const moreButton = document.createElement('button');
+                    moreButton.type = 'button';
+                    moreButton.className = 'product-filter product-filter-more';
+                    moreButton.innerHTML = filtersExpanded ? 'Less <i class="fas fa-chevron-up"></i>' : `More <span>+${secondaryCategories.length}</span> <i class="fas fa-chevron-down"></i>`;
+                    moreButton.setAttribute('aria-expanded', String(filtersExpanded));
+                    moreButton.addEventListener('click', () => {
+                        filtersExpanded = !filtersExpanded;
+                        renderFilterButtons();
+                    });
+                    filtersContainer.appendChild(moreButton);
+                }
+            }
+
+            renderFilterButtons();
         }
 
         if (searchInput) searchInput.addEventListener('input', renderProducts);

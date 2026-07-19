@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <meta name="theme-color" content="#62C7C7">
+    <meta name="theme-color" content="#17384A">
     <meta property="og:title" content="Quality Pharmaceuticals - Trusted Ayurvedic Healthcare Since 1967">
     <meta property="og:description" content="Explore GMP-certified Ayurvedic medicines from Quality Pharmaceuticals, serving families and healthcare partners since 1967.">
     <meta property="og:type" content="website">
@@ -38,21 +38,22 @@
 <body>
 
     <!-- Loading Screen -->
-    <div class="loading" id="loading"><div class="loader"></div></div>
+    <div class="loading" id="loading" aria-hidden="true"><div class="loader"></div></div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <a href="index.html" style="text-decoration:none;">
-            <div class="logo"><img src="images/optimized/logo.png.webp" alt="Quality Pharmaceuticals" decoding="async"></div>
+        <a href="index.html" class="brand-lockup" aria-label="Quality Pharmaceuticals home">
+            <div class="logo"><img src="images/optimized/logo-brand.webp" alt="Quality Pharmaceuticals official logo" decoding="async"></div>
+            <span class="brand-name"><strong>Quality</strong><small>Pharmaceuticals</small></span>
         </a>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="index.html#products">Products</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="Quality-Pharmaceuticals-Brochure.pdf" download><i class="fas fa-download"></i> Download Brochure</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Quality-Pharmaceuticals-Brochure.pdf" download>Brochure</a></li>
+            <li><a href="contact.html" class="nav-contact">Contact</a></li>
         </ul>
-        <div class="mobile-menu"><span></span><span></span><span></span></div>
+        <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
     </nav>
 
     <!-- Hero -->
@@ -65,28 +66,35 @@
         </div>
         <div class="hero-content">
             <div class="hero-text fade-in">
-                <h1>Trusted Ayurvedic & Pharmaceutical Solutions Since 1967</h1>
-                <p>Since 1967, Quality Pharmaceuticals has been delivering GMP-certified Ayurvedic medicines with a commitment to excellence, safety, and innovation in healthcare.</p>
+                <p class="hero-eyebrow"><i class="fas fa-shield-heart"></i> GMP-certified Ayurvedic healthcare since 1967</p>
+                <h1>Time-tested care for healthier everyday living.</h1>
+                <p class="hero-summary">Quality Pharmaceuticals brings decades of formulation experience to trusted Ayurvedic medicines for families, retailers, and healthcare partners.</p>
                 <div class="cta-buttons">
                     <a href="#products" class="btn btn-primary"><i class="fas fa-box-open"></i> Explore Products</a>
-                    <a href="contact.html" class="btn btn-secondary"><i class="fas fa-phone"></i> Contact Us</a>
+                    <a href="about.html" class="btn btn-secondary">Our Story <i class="fas fa-arrow-right"></i></a>
                 </div>
+                <p class="hero-assurance"><i class="fas fa-check-circle"></i> Licensed manufacturer <span></span> GST registered <span></span> Enquiries across India</p>
             </div>
-            <div class="hero-image fade-in">
-                <img src="images/optimized/Doctor.PNG.png.webp" alt="Professional Doctor" decoding="async" fetchpriority="high">
+            <div class="hero-image fade-in product-family-hero">
+                <img src="images/optimized/qp-product-family-hero-v12.webp" alt="Selected Quality Pharmaceuticals products with Ayurvedic ingredients and greenery" decoding="async" fetchpriority="high">
+                <div class="hero-image-note"><i class="fas fa-leaf"></i><span><strong>Trusted care since 1967</strong><small>Licensed, GMP-certified Ayurvedic products</small></span></div>
             </div>
         </div>
     </section>
 
     <section class="trust-strip" aria-label="Quality and compliance credentials">
-        <div class="trust-strip-item"><i class="fas fa-shield-heart"></i><span><strong>GMP Certified</strong><small>Quality-controlled manufacturing</small></span></div>
-        <div class="trust-strip-item"><i class="fas fa-file-shield"></i><span><strong>Licence A-73/1977/2018</strong><small>Manufacturing licence</small></span></div>
-        <div class="trust-strip-item"><i class="fas fa-receipt"></i><span><strong>GST Registered</strong><small>GSTIN: 09AAAFQ7540F1Z9</small></span></div>
-        <div class="trust-strip-item"><i class="fas fa-building-shield"></i><span><strong>Established 1967</strong><small>Decades of manufacturing experience</small></span></div>
+        <div class="trust-strip-item"><i class="fas fa-shield-heart"></i><span><strong>GMP Certified</strong></span></div>
+        <div class="trust-strip-item"><i class="fas fa-file-shield"></i><span><strong>Licensed Manufacturer</strong></span></div>
+        <div class="trust-strip-item"><i class="fas fa-receipt"></i><span><strong>GST Registered</strong></span></div>
+        <div class="trust-strip-item"><i class="fas fa-landmark"></i><span><strong>Since 1967</strong></span></div>
     </section>
     <!-- Why Choose Us -->
     <section class="section">
-        <h2 class="section-title fade-in" data-aos="fade-up">Why Choose Us</h2>
+        <div class="section-heading fade-in" data-aos="fade-up">
+            <p class="eyebrow">Care built on consistency</p>
+            <h2 class="section-title">Why Quality Pharmaceuticals</h2>
+            <p>Responsible manufacturing, carefully selected ingredients, and dependable support for every healthcare partner.</p>
+        </div>
         <div class="features-grid">
             <div class="feature-card fade-in" data-aos="fade-up" data-aos-delay="100">
                 <div class="feature-icon">
@@ -141,7 +149,7 @@
                     <h3 data-target="20">0</h3><p>+ Products</p>
                 </div>
                 <div class="stat-item fade-in" data-aos="fade-up" data-aos-delay="100">
-                    <h3 data-target="60">0</h3><p>+ Years Experience</p>
+                    <h3 data-target="60">0</h3><p>+ Years of Expertise</p>
                 </div>
                 <div class="stat-item fade-in" data-aos="fade-up" data-aos-delay="200">
                     <h3 data-target="5000">0</h3><p>+ Customers</p>
@@ -153,9 +161,62 @@
         </div>
     </section>
 
+    <!-- Facility Preview -->
+    <section class="facility-preview section" aria-labelledby="facilityPreviewTitle">
+        <div class="facility-preview-copy" data-aos="fade-up">
+            <p class="eyebrow">Inside Quality Pharmaceuticals</p>
+            <h2 id="facilityPreviewTitle" class="section-title">Real people. Real processes. Responsible care.</h2>
+            <p>A closer look at the premises, equipment, and team behind our Ayurvedic product range.</p>
+            <a href="about.html#facility" class="facility-text-link">Explore our facility <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="facility-preview-grid" data-aos="fade-up" data-aos-delay="100">
+            <figure class="facility-preview-card facility-preview-card-wide">
+                <img src="images/facility/optimized/packing-area.webp" alt="Product packing area at Quality Pharmaceuticals" loading="lazy" decoding="async">
+                <figcaption><strong>Final packing</strong><span>Prepared with attention to detail</span></figcaption>
+            </figure>
+            <figure class="facility-preview-card">
+                <img src="images/facility/optimized/quality-control.webp" alt="Quality control work at Quality Pharmaceuticals" loading="lazy" decoding="async">
+                <figcaption><strong>Quality control</strong><span>Careful checks and documentation</span></figcaption>
+            </figure>
+            <figure class="facility-preview-card">
+                <img src="images/facility/optimized/bottle-filling.webp" alt="Bottle filling equipment at Quality Pharmaceuticals" loading="lazy" decoding="async">
+                <figcaption><strong>Liquid filling</strong><span>Focused production processes</span></figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <p class="eyebrow fade-in" data-aos="fade-up">Product and distribution enquiries</p>
+        <h2 class="fade-in" data-aos="fade-up">Let us find the right product for your needs.</h2>
+        <p class="fade-in" data-aos="fade-up" data-aos-delay="100">Speak with our team for availability, ordering, or business enquiries.</p>
+        <a href="contact.html" class="btn btn-primary fade-in" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-paper-plane"></i> Enquire Now
+        </a>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="products-header">
+            <p class="eyebrow" data-aos="fade-up">Explore the range</p>
+            <h2 class="section-title" data-aos="fade-up">Our Products</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Browse trusted Ayurvedic formulations by product or health need.</p>
+        </div>
+        <div class="product-discovery" data-aos="fade-up">
+            <label class="product-search" for="productSearch"><i class="fas fa-search"></i><input id="productSearch" type="search" placeholder="Search products, uses, or categories" autocomplete="off"></label>
+            <div class="product-filters" id="productFilters" aria-label="Filter products by category"></div>
+            <p class="product-count" id="productCount" aria-live="polite"></p>
+        </div>
+        <div class="products-grid" id="productsGrid"></div>
+        <div class="product-empty" id="productEmpty" hidden><i class="fas fa-search"></i><h3>No products found</h3><p>Try a different product name, health need, or category.</p></div>
+    </section>
+
     <!-- Testimonials -->
-    <section class="testimonials section">
-        <h2 class="section-title fade-in" data-aos="fade-up">What Our Customers Say</h2>
+        <section class="testimonials section">
+        <div class="section-heading fade-in" data-aos="fade-up">
+            <p class="eyebrow">Long-standing relationships</p>
+            <h2 class="section-title">Trusted by Healthcare Partners</h2>
+        </div>
         <div class="testimonial-slider" id="testimonialSlider">
             <div class="testimonial fade-in" data-aos="fade-up">
                 <p class="testimonial-text">"We have been associated with Quality Pharmaceuticals for many years and regularly keep their full product range. We highly appreciate their quality, reliability, and long-term support."</p>
@@ -180,35 +241,17 @@
         </div>
     </section>
 
-    <!-- CTA Banner -->
-    <section class="cta-banner">
-        <h2 class="fade-in" data-aos="fade-up">Quality Medicines You Can Trust</h2>
-        <p class="fade-in" data-aos="fade-up" data-aos-delay="100">Join thousands of satisfied customers who trust Quality Pharmaceuticals</p>
-        <a href="#products" class="btn btn-primary fade-in" data-aos="fade-up" data-aos-delay="200">
-            <i class="fas fa-box-open"></i> View Products
-        </a>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="products-section">
-        <div class="products-header">
-            <h2 class="section-title" data-aos="fade-up">Our Products</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Premium pharmaceutical products crafted with precision and care</p>
-        </div>
-        <div class="product-discovery" data-aos="fade-up">
-            <label class="product-search" for="productSearch"><i class="fas fa-search"></i><input id="productSearch" type="search" placeholder="Search products, uses, or categories" autocomplete="off"></label>
-            <div class="product-filters" id="productFilters" aria-label="Filter products by category"></div>
-            <p class="product-count" id="productCount" aria-live="polite"></p>
-        </div>
-        <div class="products-grid" id="productsGrid"></div>
-        <div class="product-empty" id="productEmpty" hidden><i class="fas fa-search"></i><h3>No products found</h3><p>Try a different product name, health need, or category.</p></div>
-    </section>
 
     <!-- Product Detail Modal -->
-    <div class="product-modal" id="productModal">
+    <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
         <div class="modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
-            <div class="modal-body">
+            <button class="modal-close" id="modalClose" type="button" aria-label="Close product details">&times;</button>
+            <nav class="modal-section-nav" aria-label="Product detail sections">
+                <a href="#modalOverview" class="active"><i class="fas fa-circle-info"></i> Overview</a>
+                <a href="#modalUses"><i class="fas fa-stethoscope"></i> Uses &amp; Results</a>
+                <a href="#modalIngredients"><i class="fas fa-leaf"></i> Ingredients</a>
+            </nav>
+            <div class="modal-body" id="modalOverview">
                 <div class="modal-images-section">
                     <div class="modal-images">
                         <div class="main-image" id="mainImage">
@@ -224,10 +267,11 @@
                 </div>
                 <div class="modal-info-section">
                     <div class="modal-info">
-                        <p class="modal-brand">Quality Pharmaceuticals</p>
+                        <p class="modal-brand" id="modalProductMeta">Quality Pharmaceuticals</p>
                         <h2 id="modalProductName">Product Name</h2>
                         <div class="modal-price-row">
-                            <div class="modal-price" id="modalProductPrice">₹0</div>
+                            <div><span class="price-label">MRP</span><div class="modal-price" id="modalProductPrice">₹0</div></div>
+                            <small>Pack price shown · Order by enquiry</small>
                         </div>
                         <div class="modal-section" id="modalQuantitySection">
                             <h3 class="modal-section-title">Packing</h3>
@@ -254,7 +298,7 @@
                     </div>
                 </div>
             </div>
-            <div class="modal-outcomes-full">
+            <div class="modal-outcomes-full" id="modalUses">
                 <div class="product-outcomes">
                     <section class="outcome-panel indications-panel">
                         <h4><i class="fas fa-stethoscope"></i> Indications</h4>
@@ -266,10 +310,14 @@
                     </section>
                 </div>
             </div>
-            <aside class="medical-disclaimer"><i class="fas fa-circle-info"></i><p><strong>Important information:</strong> Product information reflects traditional Ayurvedic use and is provided for general awareness. Use medicines only as directed on the label or by a qualified healthcare professional. Consult a physician for persistent symptoms, pregnancy, childhood use, or existing medical conditions.</p></aside>
-            <div class="modal-ingredients-full" id="modalIngredientsFull">
+            <aside class="medical-disclaimer"><i class="fas fa-circle-info"></i><p><strong>Ayurvedic care with quality assurance:</strong> Our licensed, GMP-certified Ayurvedic products combine time-tested Ayurvedic knowledge with quality-controlled manufacturing and carefully selected ingredients. Use as directed on the label or by a qualified healthcare professional.</p></aside>
+            <div class="modal-ingredients-full" id="modalIngredients">
                 <h3 class="modal-section-title">Key Ingredients</h3>
                 <div id="ingredientsGridFull"></div>
+            </div>
+            <div class="mobile-enquiry-bar">
+                <a href="contact.html" class="btn btn-primary" id="mobileModalEnquiryButton"><i class="fas fa-paper-plane"></i> Enquire</a>
+                <a href="tel:+917355361236" class="btn btn-secondary"><i class="fas fa-phone"></i> Call</a>
             </div>
         </div>
     </div>
@@ -281,7 +329,7 @@
                 <h3>Quality Pharmaceuticals</h3>
                 <p>Trusted pharmaceutical solutions for better healthcare. Committed to quality, safety, and innovation.</p>
                 <div class="footer-credentials">
-                    <span><i class="fas fa-certificate"></i> GMP Certified</span>
+                    <span><i class="fas fa-shield-heart"></i> GMP Certified</span>
                     <span><i class="fas fa-file-shield"></i> Mfg. Licence: A-73/1977/2018</span>
                     <span><i class="fas fa-receipt"></i> GSTIN: 09AAAFQ7540F1Z9</span>
                 </div>
@@ -312,7 +360,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Quality Pharmaceuticals. All rights reserved.</p>
-            <p class="footer-legal">Ayurvedic product information is for general awareness and is not a substitute for professional medical advice. Use as directed on the label or by a qualified healthcare professional.</p>
+            <p class="footer-legal">Our licensed, GMP-certified Ayurvedic products combine time-tested Ayurvedic knowledge with quality-controlled manufacturing and carefully selected ingredients. Use as directed on the label or by a qualified healthcare professional.</p>
         </div>
     </footer>
 
