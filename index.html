@@ -399,6 +399,83 @@
         </div>
     </footer>
 
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" type="button" aria-label="Close product details"><i class="fas fa-times"></i></button>
+            <nav class="modal-section-nav" aria-label="Product sections">
+                <a href="#modalOverview" class="active"><i class="fas fa-circle-info"></i> Overview</a>
+                <a href="#modalOutcomes"><i class="fas fa-stethoscope"></i> Uses &amp; results</a>
+                <a href="#modalIngredientsSection"><i class="fas fa-mortar-pestle"></i> Ingredients</a>
+            </nav>
+            <div class="modal-body" id="modalOverview">
+                <div class="modal-images-section">
+                    <div class="modal-images">
+                        <div class="main-image" id="mainImage"></div>
+                        <div class="gallery-images">
+                            <div class="gallery-image" id="galleryImage1"></div>
+                            <div class="gallery-image" id="galleryImage2"></div>
+                            <div class="gallery-image" id="galleryImage3"></div>
+                            <div class="gallery-image" id="galleryImage4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-info-section">
+                    <div class="modal-info">
+                        <span class="modal-brand" id="modalProductMeta"></span>
+                        <h2 id="modalProductName"></h2>
+                        <div class="modal-price-row">
+                            <span class="modal-price" id="modalProductPrice"></span>
+                            <small>MRP · inclusive of all taxes</small>
+                        </div>
+                        <p class="modal-description" id="modalProductDesc"></p>
+                        <div class="modal-section" id="modalQuantitySection">
+                            <h3 class="modal-section-title">Available packs</h3>
+                            <div class="quantity-options" id="quantityOptions"></div>
+                        </div>
+                        <div class="product-guidance">
+                            <div class="guidance-card">
+                                <h4><i class="fas fa-users"></i> Suitable for</h4>
+                                <p id="modalSuitableFor"></p>
+                            </div>
+                            <div class="guidance-card">
+                                <h4><i class="fas fa-spoon"></i> Suggested dose</h4>
+                                <p id="modalDose"></p>
+                            </div>
+                        </div>
+                        <div class="modal-actions">
+                            <a class="btn btn-primary" id="modalEnquiryButton" href="contact.html"><i class="fas fa-paper-plane"></i> Enquire about this product</a>
+                            <a class="btn btn-secondary modal-call-button" href="tel:+917355361236"><i class="fas fa-phone"></i> Call +91 73553 61236</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-outcomes-full" id="modalOutcomes">
+                <div class="product-outcomes">
+                    <article class="outcome-panel indications-panel">
+                        <h4><i class="fas fa-stethoscope"></i> Indications</h4>
+                        <ul class="detail-list" id="modalIndications"></ul>
+                    </article>
+                    <article class="outcome-panel results-panel">
+                        <h4><i class="fas fa-seedling"></i> Results</h4>
+                        <ul class="detail-list" id="modalResults"></ul>
+                    </article>
+                </div>
+            </div>
+            <div class="medical-disclaimer">
+                <i class="fas fa-circle-info"></i>
+                <span><strong>Product information</strong> is provided for awareness and enquiry. Use as directed on the label or by a qualified healthcare professional.</span>
+            </div>
+            <div class="modal-ingredients-full" id="modalIngredientsSection">
+                <h3 class="modal-section-title">Key ingredients</h3>
+                <div id="ingredientsGridFull"></div>
+                <div class="modal-actions" style="max-width:1200px;margin:2rem auto 0;">
+                    <a class="btn btn-primary" id="mobileModalEnquiryButton" href="contact.html"><i class="fas fa-paper-plane"></i> Enquire about this product</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>

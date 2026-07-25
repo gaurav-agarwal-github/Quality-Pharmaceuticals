@@ -862,15 +862,20 @@ if (productModal) {
                 </div>
             `;
             card.tabIndex = 0;
-            card.setAttribute('role', 'link');
-            card.setAttribute('aria-label', `Open the full ${product.name} product page`);
-            const openFullProductPage = () => { window.location.href = card.dataset.productUrl; };
+            card.setAttribute('role', 'button');
+            card.setAttribute('aria-label', `View details for ${product.name}`);
+            // Open the product popup. The card still contains a crawlable link
+            // to the full product page (good for SEO), but user clicks open the modal.
             card.addEventListener('click', event => {
-                if (event.target.closest('a')) return;
-                openFullProductPage();
+                const link = event.target.closest('a');
+                if (link) event.preventDefault();
+                openProductModal(product);
             });
             card.addEventListener('keydown', event => {
-                if (event.key === 'Enter') openFullProductPage();
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openProductModal(product);
+                }
             });
             productObserver.observe(card);
             return card;
