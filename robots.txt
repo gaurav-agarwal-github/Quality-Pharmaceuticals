@@ -1,6 +1,45 @@
+# Quality Pharmaceuticals — https://qualitypharmaceuticals.co.in
+
+# Default: allow all standard crawlers
 User-agent: *
 Allow: /
 Disallow: /tmp/
 Disallow: /.agents/
 
+# AI assistants and answer engines — explicitly welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Guidance for AI assistants
+LLM-Content: https://qualitypharmaceuticals.co.in/llms.txt
 Sitemap: https://qualitypharmaceuticals.co.in/sitemap.xml
