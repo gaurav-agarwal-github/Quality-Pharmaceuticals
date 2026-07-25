@@ -861,9 +861,16 @@ if (productModal) {
                     </div>
                 </div>
             `;
+            card.tabIndex = 0;
+            card.setAttribute('role', 'link');
+            card.setAttribute('aria-label', `Open the full ${product.name} product page`);
+            const openFullProductPage = () => { window.location.href = card.dataset.productUrl; };
             card.addEventListener('click', event => {
                 if (event.target.closest('a')) return;
-                openProductModal(product);
+                openFullProductPage();
+            });
+            card.addEventListener('keydown', event => {
+                if (event.key === 'Enter') openFullProductPage();
             });
             productObserver.observe(card);
             return card;

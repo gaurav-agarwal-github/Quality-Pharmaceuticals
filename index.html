@@ -160,7 +160,7 @@
         </a>
         <ul class="nav-links">
             <li><a href="./" class="active" aria-current="page">Home</a></li>
-            <li><a href="ayurvedic-medicines.html">Products</a></li>
+            <li><a href="#products">Products</a></li>
             <li><a href="manufacturing.html">Manufacturing</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="Quality-Pharmaceuticals-Brochure.pdf" download>Brochure</a></li>
@@ -274,13 +274,7 @@
         </div>
     </section>
 
-
-    <section class="home-manufacturer-intro section" aria-labelledby="homeManufacturerTitle">
-      <div class="home-manufacturer-copy" data-aos="fade-up"><p class="eyebrow">Licensed Ayurvedic manufacturing</p><h2 id="homeManufacturerTitle" class="section-title">Ayurvedic medicine manufacturer in Kanpur</h2><p>Quality Pharmaceuticals is a licensed, GMP-certified Ayurvedic medicine manufacturer based in Jajmau, Kanpur. Since 1967, we have developed a focused range of syrups, tonics, tablets, capsules, oils, ointments, drops, gripe water, and churan.</p><p>Our website brings together authentic facility views, published credentials, and detailed product information for families, retailers, and distribution partners.</p><div class="manufacturer-actions"><a href="manufacturing.html" class="btn btn-primary"><i class="fas fa-industry"></i> Manufacturing &amp; quality</a><a href="ayurvedic-medicines.html" class="btn btn-secondary"><i class="fas fa-box-open"></i> Full product catalogue</a></div></div>
-      <div class="home-manufacturer-facts" data-aos="fade-up" data-aos-delay="100"><article><i class="fas fa-shield-heart"></i><strong>GMP Certified</strong><span>Quality-controlled manufacturing</span></article><article><i class="fas fa-file-shield"></i><strong>Licensed Manufacturer</strong><span>A-73/1977/2018</span></article><article><i class="fas fa-landmark"></i><strong>Serving Since 1967</strong><span>Established Ayurvedic experience</span></article><article><i class="fas fa-location-dot"></i><strong>Kanpur, Uttar Pradesh</strong><span>Product enquiries across India</span></article></div>
-    </section>
-
-    <!-- Facility Preview -->
+<!-- Facility Preview -->
     <section class="facility-preview section" aria-labelledby="facilityPreviewTitle">
         <div class="facility-preview-copy" data-aos="fade-up">
             <p class="eyebrow">Inside Quality Pharmaceuticals</p>
@@ -318,8 +312,7 @@
         </div>
         <div class="products-grid" id="productsGrid"></div>
         <div class="product-empty" id="productEmpty" hidden><i class="fas fa-search"></i><h3>No products found</h3><p>Try a different product name, health need, or category.</p></div>
-        <div class="catalogue-link-row"><a href="ayurvedic-medicines.html" class="btn btn-secondary">View the complete Ayurvedic product catalogue <i class="fas fa-arrow-right"></i></a></div>
-    </section>
+</section>
 
     <!-- CTA Banner -->
         <section class="cta-banner">
@@ -363,85 +356,6 @@
     </section>
 
 
-    <!-- Product Detail Modal -->
-    <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose" type="button" aria-label="Close product details">&times;</button>
-            <nav class="modal-section-nav" aria-label="Product detail sections">
-                <a href="#modalOverview" class="active"><i class="fas fa-circle-info"></i> Overview</a>
-                <a href="#modalUses"><i class="fas fa-stethoscope"></i> Uses &amp; Results</a>
-                <a href="#modalIngredients"><i class="fas fa-leaf"></i> Ingredients</a>
-            </nav>
-            <div class="modal-body" id="modalOverview">
-                <div class="modal-images-section">
-                    <div class="modal-images">
-                        <div class="main-image" id="mainImage">
-                            <i class="fas fa-image" style="font-size:4rem;color:var(--gray);"></i>
-                        </div>
-                        <div class="gallery-images">
-                            <div class="gallery-image" id="galleryImage1"></div>
-                            <div class="gallery-image" id="galleryImage2"></div>
-                            <div class="gallery-image" id="galleryImage3"></div>
-                            <div class="gallery-image" id="galleryImage4"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-info-section">
-                    <div class="modal-info">
-                        <p class="modal-brand" id="modalProductMeta">Quality Pharmaceuticals</p>
-                        <h2 id="modalProductName">Product Name</h2>
-                        <div class="modal-price-row">
-                            <div><span class="price-label">MRP</span><div class="modal-price" id="modalProductPrice">₹0</div></div>
-                            <small>Pack price shown · Order by enquiry</small>
-                        </div>
-                        <div class="modal-section" id="modalQuantitySection">
-                            <h3 class="modal-section-title">Packing</h3>
-                            <div class="quantity-options" id="quantityOptions"></div>
-                        </div>
-                        <div class="modal-section" id="modalDescriptionSection">
-                            <h3 class="modal-section-title">Description</h3>
-                            <div class="modal-description" id="modalProductDesc">Product description goes here...</div>
-                            <div class="product-guidance">
-                                <div class="guidance-card">
-                                    <h4><i class="fas fa-users"></i> Suitable For</h4>
-                                    <p id="modalSuitableFor"></p>
-                                </div>
-                                <div class="guidance-card">
-                                    <h4><i class="fas fa-prescription-bottle-medical"></i> Dose</h4>
-                                    <p id="modalDose"></p>
-                                </div>
-                            </div>
-                            <div class="modal-actions">
-                                <a href="contact.html" class="btn btn-primary" id="modalEnquiryButton"><i class="fas fa-paper-plane"></i> Enquire / Order</a>
-                                <a href="tel:+917355361236" class="btn btn-secondary modal-call-button"><i class="fas fa-phone"></i> Call Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-outcomes-full" id="modalUses">
-                <div class="product-outcomes">
-                    <section class="outcome-panel indications-panel">
-                        <h4><i class="fas fa-stethoscope"></i> Indications</h4>
-                        <ul class="detail-list" id="modalIndications"></ul>
-                    </section>
-                    <section class="outcome-panel results-panel">
-                        <h4><i class="fas fa-circle-check"></i> Results</h4>
-                        <ul class="detail-list" id="modalResults"></ul>
-                    </section>
-                </div>
-            </div>
-            <aside class="medical-disclaimer"><i class="fas fa-circle-info"></i><p><strong>Ayurvedic care with quality assurance:</strong> Our licensed, GMP-certified Ayurvedic products combine time-tested Ayurvedic knowledge with quality-controlled manufacturing and carefully selected ingredients. Use as directed on the label or by a qualified healthcare professional.</p></aside>
-            <div class="modal-ingredients-full" id="modalIngredients">
-                <h3 class="modal-section-title">Key Ingredients</h3>
-                <div id="ingredientsGridFull"></div>
-            </div>
-            <div class="mobile-enquiry-bar">
-                <a href="contact.html" class="btn btn-primary" id="mobileModalEnquiryButton"><i class="fas fa-paper-plane"></i> Enquire</a>
-                <a href="tel:+917355361236" class="btn btn-secondary"><i class="fas fa-phone"></i> Call</a>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -464,11 +378,11 @@
             </div>
             <div class="footer-section">
                 <h3>Ayurvedic Products</h3>
-                <a href="ayurvedic-medicines.html">All Ayurvedic Medicines</a>
-                <a href="ayurvedic-medicines.html#digestive-health">Digestive Health</a>
-                <a href="ayurvedic-medicines.html#womens-wellness">Women&rsquo;s Wellness</a>
-                <a href="ayurvedic-medicines.html#baby-and-family">Baby &amp; Family</a>
-                <a href="ayurvedic-medicines.html#pain-and-joint">Pain &amp; Joint</a>
+                <a href="#products">All Ayurvedic Medicines</a>
+                <a href="index.html?category=Digestive%20Health#products">Digestive Health</a>
+                <a href="index.html?category=Women%27s%20Wellness#products">Women&rsquo;s Wellness</a>
+                <a href="index.html?category=Baby%20%26%20Family#products">Baby &amp; Family</a>
+                <a href="index.html?category=Pain%20%26%20Joint#products">Pain &amp; Joint</a>
             </div>
             <div class="footer-section">
                 <h3>Enquiries</h3>
