@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /tmp/
+Disallow: /.agents/
+
+Sitemap: https://qualitypharmaceuticals.co.in/sitemap.xml

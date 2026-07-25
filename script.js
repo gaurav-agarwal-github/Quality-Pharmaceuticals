@@ -81,6 +81,11 @@ const fadeObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
 // ── Product Cards: staggered appearance ──────────────────────
+function productPageSlug(name) {
+    const special = { 'M.C Plus': 'mc-plus', 'Quality LAL TEL': 'quality-lal-tel', 'Amrit (Anti Dycentrical)': 'amrit-anti-dycentrical' };
+    return special[name] || name.replace(/&/g, ' and ').replace(/[’']/g, '').replace(/\(([^)]*)\)/g, ' $1 ').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
 const productObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
@@ -630,19 +635,18 @@ const products = [
         category: "Memory \u0026 Wellness",
         indications: [{"en":"Memory loss","hi":"याददाश्त की कमी"},{"en":"Forgetfulness","hi":"भूलने की बीमारी"},{"en":"Poor concentration","hi":"कम एकाग्रता"},{"en":"Low intelligence","hi":"बुद्धि की कमी"}],
         results: ["Improves memory","Enhances concentration","Supports learning"],
-        desc: "Memory-Q Syrup is a premium Ayurvedic brain tonic and memory booster designed to enhance cognitive function and mental clarity. Enriched with Ashwagandha, Brahmi, Shankhapushpi, and Saffron, it supports peak mental performance and focus.",
+        desc: "Memory-Q Syrup is a premium Ayurvedic brain tonic formulated with Shankhapushpi, Brahmi, Amla, Jatamansi, Vacha, Ashwagandha, Nagkeshar, and Gokhru to support memory, concentration, learning, and mental clarity.",
         icon: "fas fa-brain",
         images: ["images/optimized/Memory Q1.PNG.png.webp","images/optimized/Memory Q2.PNG.png.webp","images/optimized/Memory Q3.PNG.png.webp","images/optimized/Memory Q4.PNG.png.webp"],
         ingredients: [
-            { name: "Ashwagandha Root (Withania somnifera)",     img: "images/optimized/Ashwagandha Root.jpg.webp",   desc: "Ashwagandha root supports energy, stamina, and overall wellness." },
-            { name: "Shatawari Root (Asparagus racemosus)",      img: "images/optimized/Shatawari Root.jpg.webp",     desc: "Shatawari root supports nourishment, strength, and wellness." },
-            { name: "Kavach Seed (Mucuna pruriens)",             img: "images/optimized/Kavach Seed.jpg.webp",        desc: "Kavach seed supports strength, vitality, and nervous system health." },
-            { name: "Vidarikand Root (Pueraria tuberosa)",       img: "images/optimized/Vidarikand Root.jpg.webp",    desc: "Vidarikand root supports energy and physical wellness." },
-            { name: "Shankhapushpi Herb (Convolvulus pluricaulis)", img: "images/optimized/Shankhapushpi Herb.jpg.webp", desc: "Shankhapushpi supports memory, concentration, and mental clarity." },
-            { name: "Brahmi Booti (Bacopa monnieri)",            img: "images/optimized/Brahmi Booti.jpg.webp",       desc: "Brahmi supports memory, focus, and nervous system health." },
-            { name: "Amla Fruit (Phyllanthus emblica)",          img: "images/optimized/Amla Fruit.jpg.webp",         desc: "Amla supports immunity, digestion, and overall wellness." },
-            { name: "Punarnava Root (Boerhavia diffusa)",        img: "images/optimized/Punarnava Root.jpg.webp",     desc: "Punarnava root supports kidney and liver health." },
-            { name: "Arjuna Bark (Terminalia arjuna)",           img: "images/optimized/Arjuna Bark.jpg.webp",        desc: "Arjuna bark supports heart health and blood circulation." }
+            { name: "Shankhapushpi Plant (Evolvulus alsinoides)", img: "images/optimized/Shankhapushpi Herb.jpg.webp", desc: "Shankhapushpi supports memory, concentration, and mental clarity." },
+            { name: "Brahmi Plant (Bacopa monnieri)",             img: "images/optimized/Brahmi Booti.jpg.webp",       desc: "Brahmi supports memory, focus, and learning." },
+            { name: "Amla Fruit (Emblica officinalis)",           img: "images/optimized/Amla Fruit.jpg.webp",         desc: "Amla provides antioxidant support for overall wellness." },
+            { name: "Jatamansi Herb (Nardostachys jatamansi)",    img: "images/optimized/Jatamansi Plant.jpg.webp",    desc: "Jatamansi supports calmness, focus, and nervous system wellness." },
+            { name: "Vacha Rhizome (Acorus calamus)",             img: "images/optimized/Vacha Rhizome.jpg.webp",       desc: "Vacha is traditionally used to support speech, memory, and mental clarity." },
+            { name: "Ashwagandha Root (Withania somnifera)",      img: "images/optimized/Ashwagandha Root.jpg.webp",   desc: "Ashwagandha supports resilience, energy, and nervous system wellness." },
+            { name: "Nagkeshar Seed (Mesua ferrea)",              img: "images/optimized/Nagkeshar Seed.jpg.webp",       desc: "Nagkeshar is traditionally valued for balanced wellness and digestive support." },
+            { name: "Gokhru Fruit (Tribulus terrestris)",         img: "images/optimized/Gokhru Fruit.jpg.webp",       desc: "Gokhru supports strength, vitality, and urinary system wellness." }
         ],
         quantities: [{ label: "220ML", price: "₹140" }]
     }
@@ -837,15 +841,15 @@ if (productModal) {
 
         function createProductCard(product) {
             const card = document.createElement('article');
+            const slug = productPageSlug(product.name);
             card.className = 'product-card';
-            card.tabIndex = 0;
-            card.setAttribute('role', 'button');
-            card.setAttribute('aria-label', `View ${product.name} details`);
+            card.id = `product-${slug}`;
+            card.dataset.productUrl = `products/${slug}.html`;
             const imgSrc = product.images && product.images.length ? product.images[0] : '';
             const hasMultiplePacks = product.quantities && product.quantities.length > 1;
             card.innerHTML = `
                 <div class="product-image">
-                    ${imgSrc ? `<img src="${imgSrc}" alt="${product.name}" loading="lazy" decoding="async">` : `<i class="${product.icon}"></i>`}
+                    ${imgSrc ? `<img src="${imgSrc}" alt="${product.name} by Quality Pharmaceuticals" loading="lazy" decoding="async">` : `<i class="${product.icon}"></i>`}
                 </div>
                 <div class="product-info">
                     <span class="product-category">${product.category}</span>
@@ -853,17 +857,13 @@ if (productModal) {
                     <p class="product-description">${product.desc}</p>
                     <div class="product-card-footer">
                         <div><span class="product-price-label">${hasMultiplePacks ? 'MRP from' : 'MRP'}</span><div class="product-price">${product.price}</div></div>
-                        <span class="view-details-cue">View details <i class="fas fa-arrow-right"></i></span>
+                        <a class="view-details-cue" href="products/${slug}.html" aria-label="View the full ${product.name} product page">View product <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             `;
-            const openCard = () => openProductModal(product);
-            card.addEventListener('click', openCard);
-            card.addEventListener('keydown', event => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    openCard();
-                }
+            card.addEventListener('click', event => {
+                if (event.target.closest('a')) return;
+                openProductModal(product);
             });
             productObserver.observe(card);
             return card;
