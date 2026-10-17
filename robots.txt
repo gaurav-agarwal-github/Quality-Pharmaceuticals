@@ -40,6 +40,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Guidance for AI assistants
-LLM-Content: https://qualitypharmaceuticals.co.in/llms.txt
 Sitemap: https://qualitypharmaceuticals.co.in/sitemap.xml

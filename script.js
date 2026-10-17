@@ -664,6 +664,8 @@ if (productDetailPage) {
         const img = document.createElement('img');
         img.src = '../' + src;
         img.alt = product.name;
+        img.width = 700;
+        img.height = 700;
         img.decoding = 'async';
         mainImage.replaceChildren(img);
         gallery.querySelectorAll('button').forEach((button, index) => {
@@ -682,6 +684,8 @@ if (productDetailPage) {
             const img = document.createElement('img');
             img.src = '../' + src;
             img.alt = `${product.name} ${index + 1}`;
+            img.width = 100;
+            img.height = 100;
             img.loading = 'lazy';
             img.decoding = 'async';
             button.appendChild(img);
@@ -692,7 +696,10 @@ if (productDetailPage) {
     }
 
     if (product) {
-        setGallery(product.images || []);
+        gallery.querySelectorAll('[data-image]').forEach(button => {
+            const index = Number(button.dataset.image);
+            button.addEventListener('click', () => showImage(product.images[index], index));
+        });
         packButtons.forEach(button => button.addEventListener('click', () => {
             const pack = product.quantities[Number(button.dataset.pack)];
             productDetailPage.querySelector('#modalProductPrice').textContent = pack.price;
@@ -702,6 +709,9 @@ if (productDetailPage) {
             });
             setGallery(pack.images?.length ? pack.images : product.images || []);
         }));
+        const requestedPack = new URLSearchParams(window.location.search).get('pack');
+        const requestedIndex = (product.quantities || []).findIndex(pack => pack.label === requestedPack);
+        if (requestedIndex > 0) packButtons[requestedIndex].click();
         productDetailPage.querySelectorAll('.modal-section-nav a').forEach(link => {
             link.addEventListener('click', () => {
                 productDetailPage.querySelectorAll('.modal-section-nav a').forEach(item => item.classList.toggle('active', item === link));
@@ -710,173 +720,8 @@ if (productDetailPage) {
     }
 }
 
-// ── Modal Logic ───────────────────────────────────────────────
-const productModal = document.getElementById('productModal');
-if (productModal) {
-    const modalClose   = document.getElementById('modalClose');
-    const mainImage    = document.getElementById('mainImage');
-    const galleryImgEls = [
-        document.getElementById('galleryImage1'),
-        document.getElementById('galleryImage2'),
-        document.getElementById('galleryImage3'),
-        document.getElementById('galleryImage4')
-    ];
-
-    function setGalleryImages(images, productName) {
-        galleryImgEls.forEach(el => {
-            el.innerHTML = '';
-            el.onclick = null;
-            el.classList.remove('active');
-            el.style.display = 'none';
-        });
-        images.forEach((src, i) => {
-            if (i >= galleryImgEls.length) return;
-            const el = galleryImgEls[i];
-            el.style.display = 'flex';
-            el.innerHTML = `<img src="${src}" alt="${productName} ${i + 1}" loading="lazy" decoding="async">`;
-            el.onclick = () => {
-                mainImage.innerHTML = `<img src="${src}" alt="${productName}" decoding="async">`;
-                galleryImgEls.forEach(g => g.classList.remove('active'));
-                el.classList.add('active');
-            };
-        });
-        if (images.length > 0) galleryImgEls[0].classList.add('active');
-    }
-
-    function renderDetailList(elementId, items) {
-        const list = document.getElementById(elementId);
-        list.innerHTML = '';
-        (items || []).forEach(entry => {
-            const item = document.createElement('li');
-            if (typeof entry === 'object' && entry !== null) {
-                const english = document.createElement('span');
-                english.className = 'detail-primary';
-                english.textContent = entry.en;
-                item.appendChild(english);
-
-                if (entry.hi) {
-                    const hindi = document.createElement('span');
-                    hindi.className = 'detail-hindi';
-                    hindi.lang = 'hi';
-                    hindi.textContent = entry.hi;
-                    item.appendChild(hindi);
-                }
-            } else {
-                item.textContent = entry;
-            }
-            list.appendChild(item);
-        });
-    }
-
-    let modalHistoryPushed = false;
-    let lastFocusedElement = null;
-
-    function openProductModal(product) {
-        document.getElementById('modalProductName').textContent = product.name;
-        document.getElementById('modalProductMeta').textContent = `Quality Pharmaceuticals · ${product.category}`;
-        document.getElementById('modalProductDesc').textContent = product.desc;
-        document.getElementById('modalSuitableFor').textContent = product.suitableFor;
-        document.getElementById('modalDose').textContent = product.dose;
-        const enquiryUrl = 'contact.html?product=' + encodeURIComponent(product.name);
-        document.getElementById('modalEnquiryButton').href = enquiryUrl;
-        document.getElementById('mobileModalEnquiryButton').href = enquiryUrl;
-        renderDetailList('modalIndications', product.indications);
-        renderDetailList('modalResults', product.results);
-
-        const quantitySection = document.getElementById('modalQuantitySection');
-        const quantityOptions = document.getElementById('quantityOptions');
-        const priceElement    = document.getElementById('modalProductPrice');
-
-        const defaultImages = product.images && product.images.length ? product.images : [];
-
-        if (product.quantities && product.quantities.length) {
-            quantitySection.style.display = 'block';
-            quantityOptions.innerHTML = '';
-            product.quantities.forEach((qty, idx) => {
-                const btn = document.createElement('div');
-                btn.className = 'quantity-option' + (idx === 0 ? ' active' : '');
-                btn.innerHTML = `<span class="qty-label">${qty.label}</span>`;
-                btn.onclick = () => {
-                    priceElement.textContent = qty.price;
-                    document.querySelectorAll('.quantity-option').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    const imgs = qty.images && qty.images.length ? qty.images : defaultImages;
-                    mainImage.innerHTML = imgs[0] ? `<img src="${imgs[0]}" alt="${product.name}" decoding="async">` : '<i class="fas fa-image" style="font-size:4rem;color:var(--gray);"></i>';
-                    setGalleryImages(imgs, product.name);
-                };
-                quantityOptions.appendChild(btn);
-            });
-            priceElement.textContent = product.quantities[0].price;
-        } else {
-            quantitySection.style.display = 'none';
-            priceElement.textContent = product.price;
-        }
-
-        mainImage.innerHTML = defaultImages[0]
-            ? `<img src="${defaultImages[0]}" alt="${product.name}" decoding="async">`
-            : '<i class="fas fa-image" style="font-size:4rem;color:var(--gray);"></i>';
-        setGalleryImages(defaultImages, product.name);
-
-        // Ingredients
-        const grid = document.getElementById('ingredientsGridFull');
-        grid.innerHTML = '';
-        if (product.ingredients && product.ingredients.length) {
-            const container = document.createElement('div');
-            container.className = 'ingredients-table';
-            product.ingredients.forEach(ing => {
-                const item = document.createElement('div');
-                item.className = 'ingredient-item';
-                const imgHtml = ing.img
-                    ? `<img src="${ing.img}" alt="${ing.name}" loading="lazy" decoding="async">`
-                    : `<div class="ingredient-icon"><i class="${ing.icon || 'fas fa-leaf'}"></i></div>`;
-                item.innerHTML = `${imgHtml}<div><p><strong>${ing.name}</strong></p><p class="ingredient-desc">${ing.desc || ''}</p></div>`;
-                container.appendChild(item);
-            });
-            grid.appendChild(container);
-        }
-
-        lastFocusedElement = document.activeElement;
-        productModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        const modalContent = productModal.querySelector('.modal-content');
-        modalContent.scrollTop = 0;
-        productModal.querySelectorAll('.modal-section-nav a').forEach((link, index) => link.classList.toggle('active', index === 0));
-        setTimeout(() => modalClose.focus(), 50);
-
-        // Push history state so browser back button closes the modal
-        history.pushState({ modal: true }, '');
-        modalHistoryPushed = true;
-    }
-
-    function closeProductModal(skipHistory) {
-        if (!productModal.classList.contains('active')) return;
-        productModal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-        if (lastFocusedElement) lastFocusedElement.focus();
-        if (!skipHistory && modalHistoryPushed) {
-            modalHistoryPushed = false;
-            history.back();
-        } else {
-            modalHistoryPushed = false;
-        }
-    }
-
-    // Browser back button closes modal
-    window.addEventListener('popstate', () => {
-        if (productModal.classList.contains('active')) {
-            closeProductModal(true);
-        }
-    });
-
-    if (modalClose) modalClose.addEventListener('click', () => closeProductModal(false));
-    productModal.addEventListener('click', e => { if (e.target === productModal) closeProductModal(false); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProductModal(false); });
-    productModal.querySelectorAll('.modal-section-nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            productModal.querySelectorAll('.modal-section-nav a').forEach(item => item.classList.remove('active'));
-            link.classList.add('active');
-        });
-    });
+// Product discovery and cards use the static HTML as their source of card markup.
+{
 
     // Product discovery and cards
     const grid = document.getElementById('productsGrid');
@@ -886,6 +731,7 @@ if (productModal) {
     const emptyState = document.getElementById('productEmpty');
 
     if (grid) {
+        const productCardTemplates = new Map(Array.from(grid.children).map(card => [card.dataset.productUrl, card.cloneNode(true)]));
         const categories = ['All', ...new Set(products.map(product => product.category))];
         const requestedCategory = new URLSearchParams(window.location.search).get('category');
         let activeCategory = categories.includes(requestedCategory) ? requestedCategory : 'All';
@@ -898,8 +744,15 @@ if (productModal) {
         }
 
         function createProductCard(product) {
-            const card = document.createElement('article');
             const slug = productPageSlug(product.name);
+            const template = productCardTemplates.get(`products/${slug}.html`);
+            if (template) {
+                const card = template.cloneNode(true);
+                card.classList.remove('visible');
+                productObserver.observe(card);
+                return card;
+            }
+            const card = document.createElement('article');
             card.className = 'product-card';
             card.id = `product-${slug}`;
             card.dataset.productUrl = `products/${slug}.html`;

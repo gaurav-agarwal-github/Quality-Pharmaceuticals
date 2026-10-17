@@ -817,6 +817,9 @@ p{color:var(--navy-light)}
 .product-detail-page .modal-section-nav{top:70px;padding-right:9rem;padding-left:9rem}
 .product-back-link{position:absolute;top:1.15rem;left:2rem;z-index:9;display:inline-flex;align-items:center;gap:.45rem;color:var(--primary-teal-dark);font-size:.76rem;font-weight:600;text-decoration:none}
 .product-detail-page .modal-info h1{max-width:580px;margin-bottom:.8rem;color:var(--navy-blue);font-size:clamp(1.8rem,3vw,2.55rem);line-height:1.25}
+.product-detail-page .outcome-panel h2{display:flex;align-items:center;gap:.5rem;margin-bottom:.85rem;color:var(--navy-blue);font-size:.95rem}
+.product-detail-page .outcome-panel h2 i{color:var(--primary-teal-dark)}
+.product-detail-page #modalQuantitySection .modal-section-title{line-height:1.6}
 .product-detail-page .modal-body,.product-detail-page .modal-outcomes-full,.product-detail-page .modal-ingredients-full{scroll-margin-top:140px}
 .product-detail-page button{font-family:inherit}
 .product-detail-page .gallery-image img{object-fit:contain}
