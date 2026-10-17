@@ -652,6 +652,64 @@ const products = [
     }
 ];
 
+// Full product pages use the popup's layout, with static content for search engines.
+const productDetailPage = document.querySelector('.product-detail-page');
+if (productDetailPage) {
+    const product = products.find(item => productPageSlug(item.name) === productDetailPage.dataset.product);
+    const mainImage = productDetailPage.querySelector('#mainImage');
+    const gallery = productDetailPage.querySelector('.gallery-images');
+    const packButtons = productDetailPage.querySelectorAll('[data-pack]');
+
+    function showImage(src, selectedIndex) {
+        const img = document.createElement('img');
+        img.src = '../' + src;
+        img.alt = product.name;
+        img.decoding = 'async';
+        mainImage.replaceChildren(img);
+        gallery.querySelectorAll('button').forEach((button, index) => {
+            button.classList.toggle('active', index === selectedIndex);
+            button.setAttribute('aria-pressed', String(index === selectedIndex));
+        });
+    }
+
+    function setGallery(images) {
+        gallery.replaceChildren();
+        images.slice(0, 4).forEach((src, index) => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'gallery-image';
+            button.setAttribute('aria-label', `View ${product.name} image ${index + 1}`);
+            const img = document.createElement('img');
+            img.src = '../' + src;
+            img.alt = `${product.name} ${index + 1}`;
+            img.loading = 'lazy';
+            img.decoding = 'async';
+            button.appendChild(img);
+            button.addEventListener('click', () => showImage(src, index));
+            gallery.appendChild(button);
+        });
+        if (images[0]) showImage(images[0], 0);
+    }
+
+    if (product) {
+        setGallery(product.images || []);
+        packButtons.forEach(button => button.addEventListener('click', () => {
+            const pack = product.quantities[Number(button.dataset.pack)];
+            productDetailPage.querySelector('#modalProductPrice').textContent = pack.price;
+            packButtons.forEach(item => {
+                item.classList.toggle('active', item === button);
+                item.setAttribute('aria-pressed', String(item === button));
+            });
+            setGallery(pack.images?.length ? pack.images : product.images || []);
+        }));
+        productDetailPage.querySelectorAll('.modal-section-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                productDetailPage.querySelectorAll('.modal-section-nav a').forEach(item => item.classList.toggle('active', item === link));
+            });
+        });
+    }
+}
+
 // ── Modal Logic ───────────────────────────────────────────────
 const productModal = document.getElementById('productModal');
 if (productModal) {
@@ -861,22 +919,8 @@ if (productModal) {
                     </div>
                 </div>
             `;
-            card.tabIndex = 0;
-            card.setAttribute('role', 'button');
-            card.setAttribute('aria-label', `View details for ${product.name}`);
-            // Open the product popup. The card still contains a crawlable link
-            // to the full product page (good for SEO), but user clicks open the modal.
-            card.addEventListener('click', event => {
-                const link = event.target.closest('a');
-                if (link) event.preventDefault();
-                openProductModal(product);
-            });
-            card.addEventListener('keydown', event => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    openProductModal(product);
-                }
-            });
+            // The link covers the card through CSS, preserving native navigation,
+            // keyboard access, and opening the product in a new tab.
             productObserver.observe(card);
             return card;
         }
