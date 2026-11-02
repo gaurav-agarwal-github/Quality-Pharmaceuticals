@@ -189,7 +189,7 @@ const products = [
         category: "Women\u0027s Wellness",
         indications: [{"en":"Painful, irregular, scanty, or delayed menstrual cycles","hi":"दर्दनाक, अनियमित, कम या देर से आने वाला मासिक धर्म"},{"en":"Anaemia and waist pain","hi":"एनीमिया और कमर दर्द"},{"en":"Leucorrhoea","hi":"श्वेत प्रदर"},{"en":"Physical weakness","hi":"शारीरिक कमजोरी"},{"en":"Convalescence support","hi":"स्वास्थ्य लाभ में मदद"}],
         results: ["Helps regulate the menstrual cycle and improve flow","Supports reproductive health","Reduces menstrual pain and vaginal discharge","Supports haemoglobin improvement and reduced weakness"],
-        desc: "This proprietary Ayurvedic medicine is a comprehensive herbal formula primarily indicated for addressing menstrual disorders, including painful, irregular, or delayed cycles. Enriched with a potent blend of traditional ingredients such as Ashoka Bark, Kala Jeera, and Arjuna Bark, the syrup is formulated to alleviate physical weakness, anemia, and pelvic pain. Designed for Improved Quality, this health tonic serves as a restorative supplement to support reproductive health and overall vitality.",
+        desc: "This proprietary Ayurvedic medicine is a comprehensive herbal formula primarily indicated for addressing menstrual disorders, including painful, irregular, or delayed cycles. Enriched with a potent blend of traditional ingredients such as Ashoka Bark, Kala Jeera, and Arjuna Bark, the syrup is formulated to alleviate physical weakness, anemia, and pelvic pain. This health tonic serves as a restorative supplement to support reproductive health and overall vitality.",
         icon: "fas fa-capsules",
         images: ["images/optimized/QuasoCOL1.png.webp","images/optimized/QuasoCOL2.png.webp","images/optimized/QuasoCOL3.png.webp","images/optimized/QuasoCOL4.png.webp"],
         ingredients: [
@@ -227,7 +227,7 @@ const products = [
         quantities: [{ label: "10CAPS", price: "₹70" }]
     },
     {
-        name: "Liv-top", price: "₹100",
+        name: "Liv-top", price: "₹70",
         suitableFor: "All ages - children and adults",
         dose: "Children: 2-3 teaspoons twice daily. Adults: 3-4 teaspoons twice daily.",
         category: "Liver \u0026 Tonics",
@@ -277,7 +277,7 @@ const products = [
         quantities: [{ label: "60ML", price: "₹70" }, { label: "110ML", price: "₹100" }]
     },
     {
-        name: "Infantol (Babies Tonic)", price: "₹70",
+        name: "Infantol (Babies Tonic)", price: "₹60",
         suitableFor: "Infants and children",
         dose: "Infants: 1/2 teaspoon (2.5 mL) twice daily. Children: 1 teaspoon (5 mL) twice daily.",
         category: "Baby \u0026 Family",
@@ -323,7 +323,7 @@ const products = [
             { name: "Tulsi Leaf (Ocimum sanctum)",            img: "images/optimized/Tulsi leaf.PNG.webp",        desc: "Tulsi boosts immunity and supports respiratory health." },
             { name: "Bhringraj Seed (Eclipta alba)",          img: "images/optimized/Bhringraj seed.jpg.webp",    desc: "Bhringraj seeds support hair health, liver function, and overall wellness." }
         ],
-        quantities: [{ label: "100ML", price: "₹100" }, { label: "200ML", price: "₹140" }]
+        quantities: [{ label: "110ML Syrup", price: "₹100" }, { label: "220ML Syrup", price: "₹140" }]
     },
     {
         name: "Energyon", price: "₹100",
@@ -339,8 +339,8 @@ const products = [
             { name: "Ashwagandha Root (Withania somnifera)",    img: "images/optimized/Ashwagandha Root.jpg.webp",   desc: "Ashwagandha root is known for its adaptogenic and rejuvenating properties." },
             { name: "Shatawari Root (Asparagus racemosus)",     img: "images/optimized/Shatawari Root.jpg.webp",     desc: "Shatawari root supports vitality, hormonal balance, and overall wellness." },
             { name: "Kavach Seed (Mucuna pruriens)",            img: "images/optimized/Kavach Seed.jpg.webp",        desc: "Kavach seed supports strength, stamina, and nervous system health." },
-            { name: "Vidarikand Root (Pueraria tuberosa)",      img: "images/optimized/Vidarikand Root.jpg.webp",    desc: "Vidarikand root supports energy, physical strength, and immunity." },
-            { name: "Shankhpushpi Herb (Convolvulus pluricaulis)", img: "images/optimized/Shankhpushpi Herb.jpg.webp", desc: "Shankhpushpi supports memory, focus, and mental wellness." },
+            { name: "Vidarikand Root (Ipomoea digitata)",       img: "images/optimized/Vidarikand Root.jpg.webp",    desc: "Vidarikand root supports energy, physical strength, and immunity." },
+            { name: "Shankhpushpi Herb (Evolvulus alsinoides)",   img: "images/optimized/Shankhpushpi Herb.jpg.webp", desc: "Shankhpushpi supports memory, focus, and mental wellness." },
             { name: "Brahmi Booti (Bacopa monnieri)",           img: "images/optimized/Brahmi Booti.jpg.webp",       desc: "Brahmi supports memory, concentration, and nervous system wellness." },
             { name: "Amla Fruit (Phyllanthus emblica)",         img: "images/optimized/Amla Fruit.jpg.webp",         desc: "Amla is rich in antioxidants and Vitamin C, supporting immunity and digestion." },
             { name: "Punarnava Root (Boerhavia diffusa)",       img: "images/optimized/Punarnava Root.jpg.webp",     desc: "Punarnava root supports kidney health, digestion, and overall body wellness." },
@@ -355,11 +355,11 @@ const products = [
     {
         name: "M.C Plus", price: "₹90",
         suitableFor: "Ladies only",
-        dose: "Four teaspoons (20 mL) three times daily for at least two days after meals with warm water or milk.",
+        dose: "Four teaspoons (20 mL) three times daily for at least two days after meals with warm water or milk. Not to be taken during pregnancy.",
         category: "Women\u0027s Wellness",
         indications: [{"en":"Stopped or irregular menstruation","hi":"मासिक धर्म का रुकना या अनियमित होना"},{"en":"Scanty menstrual flow","hi":"कम मासिक स्राव"},{"en":"Painful menstruation","hi":"दर्दयुक्त मासिक धर्म"}],
         results: ["Helps regulate the menstrual cycle","Supports healthy menstrual flow","Reduces menstrual discomfort","Promotes women\u0027s reproductive wellness"],
-        desc: "M.C Plus is a specialized Ayurvedic proprietary medicine formulated to support women's menstrual disorders. Designed for menstrual irregularities, these capsules leverage a traditional blend of botanical extracts to help regulate and restore a healthy monthly cycle.",
+        desc: "M.C Plus is a specialized Ayurvedic proprietary medicine formulated to support women's menstrual disorders. Available as a syrup and as capsules, it is designed for menstrual irregularities and uses a traditional blend of botanical extracts to help regulate and restore a healthy monthly cycle.",
         icon: "fas fa-female",
         images: ["images/optimized/M.C Plus syrup1.PNG.png.webp","images/optimized/M.C Plus syrup2.PNG.png.webp","images/optimized/M.C Plus syrup3.PNG.png.webp","images/optimized/M.C Plus syrup4.PNG.png.webp"],
         ingredients: [
@@ -367,11 +367,12 @@ const products = [
             { name: "Kapasmool (Gossypium herbaceum)",    img: "images/optimized/Kapasmool.PNG.png.webp",   desc: "Kapasmool supports women's health, digestion, and pain relief." },
             { name: "Olatkambal (Abroma augusta)",        img: "images/optimized/Olatkambal.PNG.png.webp",  desc: "Olatkambal root supports women's reproductive health and healthy menstrual cycles." },
             { name: "Gajar Seed (Daucus carota)",         img: "images/optimized/Gajar seed.PNG.png.webp",  desc: "Gajar seeds support digestion, urinary health, and body balance." },
-            { name: "Indrayan (Citrullus colocynthis)",   img: "images/optimized/Indrayan.PNG.png.webp",    desc: "Indrayan supports detoxification and digestive health." },
-            { name: "Soya (Glycine max)",                 img: "images/optimized/Soya.PNG.png.webp",        desc: "Soya seeds are rich in protein, fiber, vitamins, and antioxidants." },
+            { name: "Indrayan Root (Citrullus colocynthis)", img: "images/optimized/Indrayan.PNG.png.webp",  desc: "Indrayan supports detoxification and digestive health." },
+            { name: "Soya / Suva Seed (Peucedanum graveolens)", img: "images/optimized/Suva Seed.jpg.webp", desc: "Suva (Indian dill) seeds are traditionally used in Ayurveda to support digestion and ease abdominal discomfort." },
+            { name: "Muli Seed (Raphanus sativus)",       img: "images/optimized/Muli.PNG.png.webp",        desc: "Muli seeds support digestion and liver function." },
+            { name: "Sonth (Zingiber officinale)",        img: "images/optimized/Sonth.PNG.png.jpg.webp",   desc: "Sonth (Dry Ginger) improves digestion and reduces inflammation." },
             { name: "Kala Til (Sesamum indicum)",         img: "images/optimized/Kala Til.PNG.jpg.webp",    desc: "Kala Til (Black Sesame) supports bone strength, heart health, and digestion." },
-            { name: "Muli (Raphanus sativus)",            img: "images/optimized/Muli.PNG.png.webp",        desc: "Muli seeds support digestion and liver function." },
-            { name: "Sonth (Zingiber officinale)",        img: "images/optimized/Sonth.PNG.png.jpg.webp",   desc: "Sonth (Dry Ginger) improves digestion and reduces inflammation." }
+            { name: "Heeng Sap (Ferula asafoetida)",      img: "images/optimized/Heeng.jpg.webp",           desc: "Heeng is traditionally used to support digestion and help relieve abdominal discomfort." }
         ],
         quantities: [
             { label: "100ML Syrup", price: "₹110" },
@@ -382,11 +383,11 @@ const products = [
     {
         name: "Quality LAL TEL", price: "₹70",
         suitableFor: "Babies only",
-        dose: "For external use. Application directions are not specified in the brochure.",
+        dose: "For external use only. Use as directed on the label or by a physician.",
         category: "Baby \u0026 Family",
         indications: [{"en":"Baby massage and physical-development support","hi":"शिशु मालिश और शारीरिक विकास में सहायता"}],
         results: ["Supports stronger bones and muscles","Deeply nourishes the skin","Improves muscle tone","Supports healthy physical development"],
-        desc: "Quality Lal Tel is a premium baby massage oil specially formulated to strengthen bones and improve muscle tone. Enriched with Till Oil (Sesame) and traditional herbs like Shankhapushpi and Arjuna Bark, this GMP-certified oil deeply nourishes delicate skin while promoting physical development.",
+        desc: "Quality Lal Tel is a premium baby massage oil specially formulated to strengthen bones and improve muscle tone. Enriched with Kala Til Oil (sesame) and traditional herbs like Shankhapushpi and Arjuna Bark, this GMP-certified oil deeply nourishes delicate skin while promoting physical development.",
         icon: "fas fa-baby",
         images: ["images/optimized/Quality lal tel1.PNG.png.webp","images/optimized/Quality lal tel2.PNG.png.webp","images/optimized/Quality lal tel3.PNG.png.webp","images/optimized/Quality lal tel4.PNG.png.webp"],
         ingredients: [
@@ -473,7 +474,7 @@ const products = [
         category: "Pain \u0026 Joint",
         indications: [{"en":"Joint pain","hi":"जोड़ों का दर्द"},{"en":"Arthritis","hi":"गठिया"},{"en":"Frozen shoulder","hi":"फ्रोजन शोल्डर"},{"en":"Sprains and strains","hi":"मोच एवं खिंचाव"},{"en":"Neck stiffness","hi":"गर्दन का अकड़ना"},{"en":"Sciatica","hi":"साइटिका"},{"en":"Cervical spondylitis","hi":"सर्वाइकल स्पॉन्डिलाइटिस"},{"en":"Lower back pain","hi":"कमर दर्द"}],
         results: ["Relieves pain and stiffness","Improves joint mobility","Reduces muscle discomfort"],
-        desc: "This Joint Pain Reliever Oil is a premium Ayurvedic formulation designed to provide fast and effective relief from chronic discomfort. Enriched with Ashwagandha, Shatavari, and Maha Haldi, it targets inflammation at the source to ease joint pains, arthritis, and muscle stiffness.",
+        desc: "This Joint Pain Reliever Oil is a premium Ayurvedic formulation designed to provide fast and effective relief from chronic discomfort. Enriched with Ashwagandha, Shatavari, and Aama Haldi, it targets inflammation at the source to ease joint pains, arthritis, and muscle stiffness.",
         icon: "fas fa-bone",
         images: ["images/optimized/Zoint oil1.PNG.png.webp","images/optimized/Zoint oil2.PNG.png.webp","images/optimized/Zoint oil3.PNG.png.webp","images/optimized/Zoint oil4.PNG.png.webp"],
         ingredients: [
@@ -612,7 +613,7 @@ const products = [
         category: "Digestive Health",
         indications: [{"en":"Indigestion","hi":"अपच"},{"en":"Loss of appetite","hi":"भूख न लगना"},{"en":"Gastric problems","hi":"पेट की समस्याएँ"},{"en":"Other stomach problems","hi":"पेट की अन्य समस्याएँ"}],
         results: ["Relieves gastric discomfort","Supports healthy digestive function","Improves digestion and soothes the digestive tract","Stimulates appetite"],
-        desc: "Dige-Q Digestive Syrup is an Ayurvedic medicine formulated over 51 years in healthcare. This GMP-certified syrup is an effective remedy for indigestion, lack of appetite, and various gastric and stomach troubles.",
+        desc: "Dige-Q Digestive Syrup is an Ayurvedic medicine backed by Quality Pharmaceuticals\u0027 formulation experience since 1967. This GMP-certified syrup is an effective remedy for indigestion, lack of appetite, and various gastric and stomach troubles.",
         icon: "fas fa-heartbeat",
         images: ["images/optimized/Dige Q1.PNG.png.webp","images/optimized/Dige Q2.PNG.png.webp","images/optimized/Dige Q3.PNG.png.webp","images/optimized/Dige Q4.PNG.png.webp"],
         ingredients: [
